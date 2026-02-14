@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce — Wireframe v1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* === WIREFRAME BAR === */
+    .wf-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: #F59E0B;
+      color: #000;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .wf-bar button {
+      background: #000;
+      color: #F59E0B;
+      border: none;
+      padding: 4px 12px;
+      font-size: 11px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    body.wf-mobile {
+      max-width: 375px;
+      margin: 0 auto;
+      box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+    }
+
+    /* === RESET & PALETTE === */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --wf-white: #FFFFFF;
+      --wf-bg: #F8F9FA;
+      --wf-surface: #FFFFFF;
+      --wf-border: #E2E5E9;
+      --wf-text: #1A1D23;
+      --wf-text-muted: #5F6B7A;
+      --wf-text-light: #8E99A8;
+      --wf-accent: #2563EB;
+      --wf-accent-light: #EFF6FF;
+      --wf-dark-bg: #111318;
+      --wf-dark-text: #F1F3F5;
+      --wf-dark-muted: #9CA3AF;
+      --wf-placeholder: #D1D5DB;
+      --wf-placeholder-text: #6B7280;
+    }
+
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--wf-bg);
+      color: var(--wf-text);
+      line-height: 1.6;
+      padding-top: 36px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    a { color: var(--wf-accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) { .container { padding: 0 24px; } }
+    @media (min-width: 1024px) { .container { padding: 0 32px; } }
+
+    /* === NAV === */
+    .nav {
+      position: fixed;
+      top: 36px;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 16px 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--wf-border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      width: 140px;
+      height: 36px;
+      background: var(--wf-placeholder);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--wf-placeholder-text);
+    }
+
+    .nav-links {
+      display: none;
+      gap: 32px;
+      list-style: none;
+    }
+
+    @media (min-width: 1024px) { .nav-links { display: flex; } }
+
+    .nav-links a {
+      color: var(--wf-text-muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--wf-text); text-decoration: none; }
+
+    .nav-cta {
+      background: var(--wf-accent);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav-hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--wf-text);
+    }
+
+    @media (min-width: 1024px) { .nav-hamburger { display: none; } }
+
+    /* === HERO === */
+    .hero {
+      background: var(--wf-surface);
+      padding: 120px 0 80px;
+    }
+
+    @media (min-width: 768px) { .hero { padding: 140px 0 100px; } }
+
+    .hero-grid {
+      display: grid;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--wf-accent);
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) { .hero h1 { font-size: 2.75rem; } }
+    @media (min-width: 1024px) { .hero h1 { font-size: 3.25rem; } }
+
+    .hero-sub {
+      font-size: 1.125rem;
+      color: var(--wf-text-muted);
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      background: var(--wf-accent);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--wf-text);
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      border: 1px solid var(--wf-border);
+      cursor: pointer;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+    }
+
+    .stat-number {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--wf-accent);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--wf-text-light);
+    }
+
+    .hero-image {
+      aspect-ratio: 4/3;
+      background: var(--wf-placeholder);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--wf-placeholder-text);
+    }
+
+    /* === SECTIONS === */
+    section { padding: 64px 0; }
+    @media (min-width: 768px) { section { padding: 96px 0; } }
+    @media (min-width: 1024px) { section { padding: 120px 0; } }
+
+    .section-header { margin-bottom: 48px; }
+    .section-header.center { text-align: center; }
+
+    .section-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--wf-accent);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 1.875rem;
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: 1024px) { .section-title { font-size: 2.25rem; } }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--wf-text-muted);
+      max-width: 600px;
+    }
+
+    .section-header.center .section-subtitle { margin: 0 auto; }
+
+    /* === SERVICES GRID === */
+    .services-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .service-card {
+      background: var(--wf-surface);
+      border: 1px solid var(--wf-border);
+      border-radius: 12px;
+      padding: 32px 28px;
+    }
+
+    .service-number {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--wf-border);
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-size: 1.125rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--wf-text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .service-link {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--wf-accent);
+    }
+
+    /* === PACKAGES === */
+    .packages-section { background: var(--wf-surface); }
+
+    .packages-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) { .packages-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .package-card {
+      background: var(--wf-bg);
+      border: 1px solid var(--wf-border);
+      border-radius: 12px;
+      padding: 36px 28px;
+      position: relative;
+    }
+
+    .package-card.featured {
+      border-color: var(--wf-accent);
+      background: var(--wf-accent-light);
+    }
+
+    .package-badge {
+      position: absolute;
+      top: -12px;
+      left: 28px;
+      background: var(--wf-accent);
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .package-name {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+
+    .package-for {
+      color: var(--wf-text-light);
+      font-size: 0.875rem;
+      margin-bottom: 20px;
+    }
+
+    .package-price {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .package-price span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--wf-text-muted);
+    }
+
+    .package-desc {
+      color: var(--wf-text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--wf-border);
+    }
+
+    .package-features {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .package-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .package-features li::before {
+      content: '✓';
+      color: var(--wf-accent);
+      font-weight: 700;
+    }
+
+    .package-cta {
+      width: 100%;
+      padding: 14px;
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 1px solid var(--wf-border);
+      background: white;
+      color: var(--wf-text);
+    }
+
+    .package-card.featured .package-cta {
+      background: var(--wf-accent);
+      color: white;
+      border: none;
+    }
+
+    /* === PROCESS === */
+    .process-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) { .process-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .process-step {
+      background: var(--wf-surface);
+      border: 1px solid var(--wf-border);
+      border-radius: 12px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .process-number {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--wf-accent);
+      margin-bottom: 16px;
+    }
+
+    .process-step h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--wf-text-muted);
+      font-size: 0.875rem;
+    }
+
+    /* === CASE STUDY === */
+    .case-study {
+      background: var(--wf-surface);
+      border: 1px solid var(--wf-border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .case-study-grid { display: grid; }
+
+    @media (min-width: 1024px) {
+      .case-study-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .case-study-image {
+      aspect-ratio: 16/10;
+      background: var(--wf-placeholder);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--wf-placeholder-text);
+    }
+
+    .case-study-content {
+      padding: 40px;
+    }
+
+    .case-study-tag {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--wf-accent);
+      margin-bottom: 12px;
+    }
+
+    .case-study-title {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .case-study-desc {
+      color: var(--wf-text-muted);
+      margin-bottom: 28px;
+    }
+
+    .case-study-metrics {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 24px;
+    }
+
+    .metric-value {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--wf-accent);
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--wf-text-light);
+    }
+
+    /* === TOOLS === */
+    .tools-section { background: var(--wf-surface); }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) { .tools-grid { grid-template-columns: repeat(6, 1fr); } }
+
+    .tool-item {
+      aspect-ratio: 1;
+      background: var(--wf-bg);
+      border: 1px solid var(--wf-border);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      color: var(--wf-text-muted);
+      text-align: center;
+    }
+
+    .tool-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--wf-placeholder);
+      border-radius: 6px;
+    }
+
+    /* === FINAL CTA === */
+    .final-cta {
+      background: var(--wf-surface);
+      text-align: center;
+      padding: 80px 0 100px;
+    }
+
+    .final-cta h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) { .final-cta h2 { font-size: 2.5rem; } }
+
+    .final-cta p {
+      color: var(--wf-text-muted);
+      font-size: 1.125rem;
+      margin-bottom: 32px;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--wf-dark-bg);
+      color: var(--wf-dark-text);
+      padding: 64px 0 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 40px;
+    }
+
+    @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+
+    .footer-brand h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+      color: var(--wf-dark-muted);
+      font-size: 0.875rem;
+    }
+
+    .footer-links h4 {
+      font-size: 0.875rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: var(--wf-dark-muted); font-size: 0.875rem; }
+    .footer-links a:hover { color: var(--wf-dark-text); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 48px;
+      padding-top: 24px;
+      text-align: center;
+      color: var(--wf-dark-muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- WIREFRAME BAR -->
+<div class="wf-bar">
+  <span>📐 WIREFRAME — Ecommerce v1 — Feb 14, 2026 — Mid-fidelity UX focus</span>
+  <button onclick="document.body.classList.toggle('wf-mobile')">Toggle Mobile</button>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="nav-logo">[LOGO]</div>
+    <ul class="nav-links">
+      <li><a href="/ecommerce" class="active" style="color: var(--wf-text);">Ecommerce</a></li>
+      <li><a href="/marketing">Marketing</a></li>
+      <li><a href="/enterprise">Enterprise</a></li>
+      <li><a href="/work">Work</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <button class="nav-cta">Book a Call</button>
+      <button class="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow">Ecommerce</p>
+        <h1>Build stores that sell relentlessly</h1>
+        <p class="hero-sub">From Shopify setup to seven-figure scaling — we build the entire ecommerce engine: store, email, analytics, automation, and the custom apps that give you an edge.</p>
+        
+        <div class="hero-ctas">
+          <button class="btn-primary">Get Your Growth Audit →</button>
+          <button class="btn-secondary">See Ecommerce Work</button>
+        </div>
+        
+        <div class="hero-stats">
+          <div>
+            <div class="stat-number">$12M+</div>
+            <div class="stat-label">Revenue Powered</div>
+          </div>
+          <div>
+            <div class="stat-number">85+</div>
+            <div class="stat-label">Stores Built</div>
+          </div>
+          <div>
+            <div class="stat-number">3.2x</div>
+            <div class="stat-label">Avg. ROAS Lift</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-image">[Store Dashboard Screenshot]</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">What We Build</p>
+      <h2 class="section-title">Full-stack ecommerce, not just a storefront</h2>
+      <p class="section-subtitle">Most agencies stop at the store. We build the entire system that makes it profitable.</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-number">01</div>
+        <h3>Shopify Development</h3>
+        <p>Custom themes, headless builds, Plus migrations. Stores that load fast and convert harder.</p>
+        <a href="#" class="service-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <h3>Email & SMS (Klaviyo)</h3>
+        <p>Flows that recover carts, welcome sequences that build trust, campaigns that get opened.</p>
+        <a href="#" class="service-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <h3>Analytics & Attribution</h3>
+        <p>Server-side tracking that actually works post-iOS14. Know which channels drive revenue.</p>
+        <a href="#" class="service-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">04</div>
+        <h3>CDP & Segmentation</h3>
+        <p>Unified customer profiles. Smart segments. Personalization that increases LTV.</p>
+        <a href="#" class="service-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">05</div>
+        <h3>Custom Apps & Integrations</h3>
+        <p>When off-the-shelf doesn't cut it. Subscription logic, bundles, loyalty, ERP syncs.</p>
+        <a href="#" class="service-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">06</div>
+        <h3>CRO & A/B Testing</h3>
+        <p>Conversion optimization grounded in data. We test everything from headlines to checkout.</p>
+        <a href="#" class="service-link">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages-section">
+  <div class="container">
+    <div class="section-header center">
+      <p class="section-eyebrow">Packages</p>
+      <h2 class="section-title">Choose your scale</h2>
+      <p class="section-subtitle">Clear pricing for where you are. Room to grow.</p>
+    </div>
+    
+    <div class="packages-grid">
+      <div class="package-card">
+        <h3 class="package-name">Launch</h3>
+        <p class="package-for">For brands starting out</p>
+        <div class="package-price">$5,000 <span>one-time</span></div>
+        <p class="package-desc">Beautiful, conversion-optimized Shopify store ready to sell.</p>
+        <ul class="package-features">
+          <li>Custom Shopify theme</li>
+          <li>Mobile-first responsive design</li>
+          <li>Essential Klaviyo flows (4)</li>
+          <li>Basic analytics setup</li>
+          <li>2 weeks delivery</li>
+        </ul>
+        <button class="package-cta">Get Started</button>
+      </div>
+      
+      <div class="package-card featured">
+        <div class="package-badge">Most Popular</div>
+        <h3 class="package-name">Growth</h3>
+        <p class="package-for">For brands scaling $1M–$5M</p>
+        <div class="package-price">$3,500 <span>/month</span></div>
+        <p class="package-desc">Full-stack ecommerce management. We become your tech team.</p>
+        <ul class="package-features">
+          <li>Everything in Launch</li>
+          <li>Advanced email strategy (12 flows)</li>
+          <li>Server-side tracking</li>
+          <li>Multi-touch attribution</li>
+          <li>A/B testing program</li>
+          <li>Dedicated account manager</li>
+        </ul>
+        <button class="package-cta">Get Started</button>
+      </div>
+      
+      <div class="package-card">
+        <h3 class="package-name">Scale</h3>
+        <p class="package-for">For brands pushing $10M+</p>
+        <div class="package-price">Custom</div>
+        <p class="package-desc">Enterprise-grade. Headless, multi-market, fully integrated.</p>
+        <ul class="package-features">
+          <li>Everything in Growth</li>
+          <li>Headless / composable builds</li>
+          <li>Multi-market / multi-currency</li>
+          <li>Custom app development</li>
+          <li>ERP / PIM integrations</li>
+          <li>Dedicated engineering team</li>
+        </ul>
+        <button class="package-cta">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">How We Work</p>
+      <h2 class="section-title">From audit to optimization</h2>
+      <p class="section-subtitle">A proven process that de-risks your investment and delivers results fast.</p>
+    </div>
+    
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-number">01</div>
+        <h4>Discovery & Audit</h4>
+        <p>We analyze your current store, analytics, email, and customer journey.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">02</div>
+        <h4>Foundation Build</h4>
+        <p>We fix the fundamentals: tracking, email flows, core UX issues.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">03</div>
+        <h4>Scale & Optimize</h4>
+        <p>Run experiments, build custom features, systematically increase CVR.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">04</div>
+        <h4>Ongoing Partnership</h4>
+        <p>Always optimizing, always shipping, always growing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section style="background: var(--wf-surface);">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Case Study</p>
+      <h2 class="section-title">Results, not promises</h2>
+    </div>
+    
+    <div class="case-study">
+      <div class="case-study-grid">
+        <div class="case-study-image">[Store Before/After Screenshot]</div>
+        <div class="case-study-content">
+          <p class="case-study-tag">DTC Fashion · Shopify Plus</p>
+          <h3 class="case-study-title">From $200K/mo to $1.2M/mo in 14 months</h3>
+          <p class="case-study-desc">A premium streetwear brand came to us with a sluggish Shopify store, no email strategy, and analytics they couldn't trust. We rebuilt everything.</p>
+          
+          <div class="case-study-metrics">
+            <div>
+              <div class="metric-value">6x</div>
+              <div class="metric-label">Revenue Growth</div>
+            </div>
+            <div>
+              <div class="metric-value">42%</div>
+              <div class="metric-label">Email Revenue Share</div>
+            </div>
+            <div>
+              <div class="metric-value">2.8s</div>
+              <div class="metric-label">Load Time (was 7.2s)</div>
+            </div>
+          </div>
+          
+          <a href="#" class="service-link">Read full case study →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section">
+  <div class="container">
+    <div class="section-header center">
+      <p class="section-eyebrow">Our Stack</p>
+      <h2 class="section-title">Tools we've mastered</h2>
+    </div>
+    
+    <div class="tools-grid">
+      <div class="tool-item"><div class="tool-icon"></div>Shopify</div>
+      <div class="tool-item"><div class="tool-icon"></div>Klaviyo</div>
+      <div class="tool-item"><div class="tool-icon"></div>Segment</div>
+      <div class="tool-item"><div class="tool-icon"></div>Recharge</div>
+      <div class="tool-item"><div class="tool-icon"></div>Triple Whale</div>
+      <div class="tool-item"><div class="tool-icon"></div>Elevar</div>
+      <div class="tool-item"><div class="tool-icon"></div>Gorgias</div>
+      <div class="tool-item"><div class="tool-icon"></div>Yotpo</div>
+      <div class="tool-item"><div class="tool-icon"></div>Rebuy</div>
+      <div class="tool-item"><div class="tool-icon"></div>Postscript</div>
+      <div class="tool-item"><div class="tool-icon"></div>GA4</div>
+      <div class="tool-item"><div class="tool-icon"></div>Hydrogen</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Let's make your store unstoppable</h2>
+    <p>Free growth audit. No pitch deck. Just a conversation about your numbers.</p>
+    <button class="btn-primary">Book Your Free Audit →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>[Company Name]</h3>
+        <p>Canadian Expertise. Pakistani Efficiency.<br>World-class Quality.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/ecommerce">Ecommerce</a></li>
+          <li><a href="/marketing">Marketing</a></li>
+          <li><a href="/enterprise">Enterprise</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">Memox</a></li>
+          <li><a href="#">Agent OS</a></li>
+          <li><a href="#">MoltCloud</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 [Company Name]. All rights reserved.</div>
+  </div>
+</footer>
+
+<!--
+SECTION_MANIFEST:
+[
+  {"order":1,"section":"Navigation","component":"Header"},
+  {"order":2,"section":"Hero","component":"VerticalHero","props":{"stats":3,"image":true}},
+  {"order":3,"section":"Services","component":"NumberedGrid","props":{"count":6}},
+  {"order":4,"section":"Packages","component":"PricingGrid","props":{"count":3,"featured":"Growth"}},
+  {"order":5,"section":"Process","component":"ProcessGrid","props":{"steps":4}},
+  {"order":6,"section":"Case Study","component":"CaseStudyFeature"},
+  {"order":7,"section":"Tools","component":"ToolsGrid","props":{"count":12}},
+  {"order":8,"section":"Final CTA","component":"CenteredCTA"},
+  {"order":9,"section":"Footer","component":"Footer"}
+]
+-->
+
+</body>
+</html>
