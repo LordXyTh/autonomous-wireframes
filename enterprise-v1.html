@@ -3,695 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enterprise — Wireframe v1</title>
+  <title>Enterprise — Wireframe v2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* === WIREFRAME BAR === */
-    .wf-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      background: #F59E0B;
-      color: #000;
-      font-family: 'Courier New', monospace;
-      font-size: 12px;
-      padding: 8px 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .wf-bar button {
-      background: #000;
-      color: #F59E0B;
-      border: none;
-      padding: 4px 12px;
-      font-size: 11px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    body.wf-mobile {
-      max-width: 375px;
-      margin: 0 auto;
-      box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
-    }
-
-    /* === RESET & PALETTE === */
+    .wf-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #F59E0B; color: #000; font-family: 'Courier New', monospace; font-size: 12px; padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; }
+    .wf-bar button { background: #000; color: #F59E0B; border: none; padding: 4px 12px; font-size: 11px; cursor: pointer; border-radius: 4px; }
+    body.wf-mobile { max-width: 375px; margin: 0 auto; box-shadow: 0 0 0 9999px rgba(0,0,0,0.5); }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    :root {
-      --wf-white: #FFFFFF;
-      --wf-bg: #F8F9FA;
-      --wf-surface: #FFFFFF;
-      --wf-border: #E2E5E9;
-      --wf-text: #1A1D23;
-      --wf-text-muted: #5F6B7A;
-      --wf-text-light: #8E99A8;
-      --wf-accent: #2563EB;
-      --wf-accent-light: #EFF6FF;
-      --wf-dark-bg: #111318;
-      --wf-dark-text: #F1F3F5;
-      --wf-dark-muted: #9CA3AF;
-      --wf-placeholder: #D1D5DB;
-      --wf-placeholder-text: #6B7280;
-    }
-
+    :root { --wf-bg: #F8F9FA; --wf-surface: #FFFFFF; --wf-border: #E2E5E9; --wf-text: #1A1D23; --wf-text-muted: #5F6B7A; --wf-text-light: #8E99A8; --wf-accent: #2563EB; --wf-accent-light: #EFF6FF; --wf-dark-bg: #111318; --wf-dark-text: #F1F3F5; --wf-dark-muted: #9CA3AF; --wf-placeholder: #D1D5DB; }
     html { scroll-behavior: smooth; }
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--wf-bg);
-      color: var(--wf-text);
-      line-height: 1.6;
-      padding-top: 36px;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-
+    body { font-family: 'Inter', sans-serif; background: var(--wf-bg); color: var(--wf-text); line-height: 1.6; padding-top: 36px; }
+    h1, h2, h3, h4 { font-family: 'DM Sans', sans-serif; font-weight: 600; line-height: 1.2; }
     a { color: var(--wf-accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
     @media (min-width: 768px) { .container { padding: 0 24px; } }
     @media (min-width: 1024px) { .container { padding: 0 32px; } }
 
-    /* === NAV === */
-    .nav {
-      position: fixed;
-      top: 36px;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 16px 0;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--wf-border);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo {
-      width: 140px;
-      height: 36px;
-      background: var(--wf-placeholder);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      color: var(--wf-placeholder-text);
-    }
-
-    .nav-links {
-      display: none;
-      gap: 32px;
-      list-style: none;
-    }
-
+    .nav { position: fixed; top: 36px; left: 0; right: 0; z-index: 100; padding: 16px 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--wf-border); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { width: 140px; height: 36px; background: var(--wf-placeholder); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #6B7280; }
+    .nav-links { display: none; gap: 32px; list-style: none; }
     @media (min-width: 1024px) { .nav-links { display: flex; } }
-
-    .nav-links a {
-      color: var(--wf-text-muted);
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover, .nav-links a.active { color: var(--wf-text); text-decoration: none; }
-
-    .nav-cta {
-      background: var(--wf-accent);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .nav-hamburger {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-    }
-
-    .nav-hamburger span {
-      width: 24px;
-      height: 2px;
-      background: var(--wf-text);
-    }
-
+    .nav-links a { color: var(--wf-text-muted); font-size: 14px; font-weight: 500; }
+    .nav-links a.active { color: var(--wf-text); }
+    .nav-cta { background: var(--wf-accent); color: white; padding: 10px 20px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; border: none; cursor: pointer; }
+    .nav-hamburger { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-hamburger span { width: 24px; height: 2px; background: var(--wf-text); }
     @media (min-width: 1024px) { .nav-hamburger { display: none; } }
 
-    /* === HERO === */
-    .hero {
-      background: var(--wf-surface);
-      padding: 120px 0 80px;
-    }
-
+    .hero { background: var(--wf-surface); padding: 120px 0 80px; }
     @media (min-width: 768px) { .hero { padding: 140px 0 100px; } }
-
-    .hero-content {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: var(--wf-accent-light);
-      color: var(--wf-accent);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 100px;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
+    .hero-content { text-align: center; max-width: 800px; margin: 0 auto; }
+    .hero-badge { display: inline-block; background: var(--wf-accent-light); color: var(--wf-accent); font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 100px; margin-bottom: 24px; }
+    .hero h1 { font-size: 2.25rem; font-weight: 700; margin-bottom: 20px; }
     @media (min-width: 768px) { .hero h1 { font-size: 2.75rem; } }
     @media (min-width: 1024px) { .hero h1 { font-size: 3.25rem; } }
-
-    .hero-sub {
-      font-size: 1.125rem;
-      color: var(--wf-text-muted);
-      margin-bottom: 32px;
-    }
-
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-bottom: 64px;
-    }
-
-    .btn-primary {
-      background: var(--wf-accent);
-      color: white;
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 15px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-secondary {
-      background: white;
-      color: var(--wf-text);
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 15px;
-      border: 1px solid var(--wf-border);
-      cursor: pointer;
-    }
-
-    .hero-promise {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      padding-top: 48px;
-      border-top: 1px solid var(--wf-border);
-    }
-
-    @media (max-width: 640px) {
-      .hero-promise { grid-template-columns: 1fr; gap: 24px; }
-    }
-
+    .hero-sub { font-size: 1.125rem; color: var(--wf-text-muted); margin-bottom: 32px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 64px; }
+    .btn-primary { background: var(--wf-accent); color: white; padding: 14px 28px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px; border: none; cursor: pointer; }
+    .btn-secondary { background: white; color: var(--wf-text); padding: 14px 28px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px; border: 1px solid var(--wf-border); cursor: pointer; }
+    .hero-promise { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-top: 48px; border-top: 1px solid var(--wf-border); }
+    @media (max-width: 640px) { .hero-promise { grid-template-columns: 1fr; gap: 24px; } }
     .promise-item { text-align: center; }
+    .promise-icon { width: 52px; height: 52px; background: var(--wf-accent-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 16px; }
+    .promise-title { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+    .promise-text { font-size: 0.875rem; color: var(--wf-text-muted); }
 
-    .promise-icon {
-      width: 52px;
-      height: 52px;
-      background: var(--wf-accent-light);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      margin: 0 auto 16px;
-    }
-
-    .promise-title {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .promise-text {
-      font-size: 0.875rem;
-      color: var(--wf-text-muted);
-    }
-
-    /* === SECTIONS === */
     section { padding: 64px 0; }
     @media (min-width: 768px) { section { padding: 96px 0; } }
     @media (min-width: 1024px) { section { padding: 120px 0; } }
-
     .section-header { margin-bottom: 48px; }
     .section-header.center { text-align: center; }
-
-    .section-eyebrow {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--wf-accent);
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: 1.875rem;
-      margin-bottom: 12px;
-    }
-
+    .section-eyebrow { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--wf-accent); margin-bottom: 12px; }
+    .section-title { font-size: 1.875rem; margin-bottom: 12px; }
     @media (min-width: 1024px) { .section-title { font-size: 2.25rem; } }
-
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--wf-text-muted);
-      max-width: 600px;
-    }
-
+    .section-subtitle { font-size: 1.1rem; color: var(--wf-text-muted); max-width: 600px; }
     .section-header.center .section-subtitle { margin: 0 auto; }
 
-    /* === SERVICES GRID === */
-    .services-grid {
-      display: grid;
-      gap: 20px;
-    }
-
+    .services-grid { display: grid; gap: 20px; }
     @media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(5, 1fr); } }
+    .service-card { background: var(--wf-surface); border: 1px solid var(--wf-border); border-radius: 10px; padding: 28px 24px; text-align: center; }
+    .service-icon { width: 44px; height: 44px; background: var(--wf-accent-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin: 0 auto 16px; }
+    .service-card h3 { font-size: 0.95rem; margin-bottom: 8px; }
+    .service-card p { color: var(--wf-text-muted); font-size: 0.8rem; }
 
-    .service-card {
-      background: var(--wf-surface);
-      border: 1px solid var(--wf-border);
-      border-radius: 10px;
-      padding: 28px 24px;
-      text-align: center;
-    }
-
-    .service-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--wf-accent-light);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      margin: 0 auto 16px;
-    }
-
-    .service-card h3 {
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-    }
-
-    .service-card p {
-      color: var(--wf-text-muted);
-      font-size: 0.8rem;
-    }
-
-    /* === COMPARISON === */
     .comparison-section { background: var(--wf-surface); }
-
-    .comparison-table {
-      background: var(--wf-bg);
-      border: 1px solid var(--wf-border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .comparison-header {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      background: var(--wf-surface);
-      border-bottom: 1px solid var(--wf-border);
-      padding: 20px 32px;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
+    .comparison-table { background: var(--wf-bg); border: 1px solid var(--wf-border); border-radius: 12px; overflow: hidden; }
+    .comparison-header { display: grid; grid-template-columns: 2fr 1fr 1fr; background: var(--wf-surface); border-bottom: 1px solid var(--wf-border); padding: 20px 32px; font-weight: 600; font-size: 14px; }
     .comparison-header span:not(:first-child) { text-align: center; }
-
-    .comparison-row {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      padding: 18px 32px;
-      border-bottom: 1px solid var(--wf-border);
-      font-size: 0.95rem;
-    }
-
+    .comparison-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 18px 32px; border-bottom: 1px solid var(--wf-border); font-size: 0.95rem; }
     .comparison-row:last-child { border-bottom: none; }
-
     .comparison-row span:not(:first-child) { text-align: center; }
-
     .comparison-row .check { color: var(--wf-accent); font-weight: 600; }
     .comparison-row .x { color: var(--wf-text-light); }
 
-    /* === PRICING === */
-    .pricing-cards {
-      display: grid;
-      gap: 24px;
-    }
-
+    .pricing-cards { display: grid; gap: 24px; }
     @media (min-width: 768px) { .pricing-cards { grid-template-columns: repeat(2, 1fr); } }
+    .pricing-card { background: var(--wf-surface); border: 1px solid var(--wf-border); border-radius: 12px; padding: 40px 32px; position: relative; }
+    .pricing-card.featured { border-color: var(--wf-accent); background: var(--wf-accent-light); }
+    .pricing-badge { position: absolute; top: -12px; left: 32px; background: var(--wf-accent); color: white; font-size: 11px; font-weight: 600; padding: 6px 14px; border-radius: 4px; }
+    .pricing-name { font-size: 1.375rem; margin-bottom: 6px; }
+    .pricing-for { color: var(--wf-text-light); font-size: 0.9rem; margin-bottom: 20px; }
+    .pricing-price { font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; }
+    .pricing-price span { font-size: 0.9rem; font-weight: 500; color: var(--wf-text-muted); }
+    .pricing-desc { color: var(--wf-text-muted); font-size: 0.9rem; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--wf-border); }
+    .pricing-features { list-style: none; margin-bottom: 28px; }
+    .pricing-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; margin-bottom: 12px; }
+    .pricing-features li::before { content: '✓'; color: var(--wf-accent); font-weight: 700; }
+    .pricing-cta { width: 100%; padding: 14px; text-align: center; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; border-radius: 6px; cursor: pointer; border: 1px solid var(--wf-border); background: white; color: var(--wf-text); }
+    .pricing-card.featured .pricing-cta { background: var(--wf-accent); color: white; border: none; }
 
-    .pricing-card {
-      background: var(--wf-surface);
-      border: 1px solid var(--wf-border);
-      border-radius: 12px;
-      padding: 40px 32px;
-      position: relative;
-    }
-
-    .pricing-card.featured {
-      border-color: var(--wf-accent);
-      background: var(--wf-accent-light);
-    }
-
-    .pricing-badge {
-      position: absolute;
-      top: -12px;
-      left: 32px;
-      background: var(--wf-accent);
-      color: white;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 4px;
-    }
-
-    .pricing-name {
-      font-size: 1.375rem;
-      margin-bottom: 6px;
-    }
-
-    .pricing-for {
-      color: var(--wf-text-light);
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-    }
-
-    .pricing-price {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .pricing-price span {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--wf-text-muted);
-    }
-
-    .pricing-desc {
-      color: var(--wf-text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 28px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid var(--wf-border);
-    }
-
-    .pricing-features {
-      list-style: none;
-      margin-bottom: 28px;
-    }
-
-    .pricing-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.95rem;
-      margin-bottom: 12px;
-    }
-
-    .pricing-features li::before {
-      content: '✓';
-      color: var(--wf-accent);
-      font-weight: 700;
-    }
-
-    .pricing-cta {
-      width: 100%;
-      padding: 14px;
-      text-align: center;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      border: 1px solid var(--wf-border);
-      background: white;
-      color: var(--wf-text);
-    }
-
-    .pricing-card.featured .pricing-cta {
-      background: var(--wf-accent);
-      color: white;
-      border: none;
-    }
-
-    /* === TRUST === */
-    .trust-grid {
-      display: grid;
-      gap: 24px;
-    }
-
+    .trust-grid { display: grid; gap: 24px; }
     @media (min-width: 768px) { .trust-grid { grid-template-columns: repeat(3, 1fr); } }
+    .trust-card { background: var(--wf-surface); border: 1px solid var(--wf-border); border-radius: 10px; padding: 36px 28px; text-align: center; }
+    .trust-number { font-family: 'DM Sans', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--wf-accent); margin-bottom: 12px; }
+    .trust-card h4 { font-size: 1rem; margin-bottom: 8px; }
+    .trust-card p { color: var(--wf-text-muted); font-size: 0.875rem; }
 
-    .trust-card {
-      background: var(--wf-surface);
-      border: 1px solid var(--wf-border);
-      border-radius: 10px;
-      padding: 36px 28px;
-      text-align: center;
-    }
-
-    .trust-number {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--wf-accent);
-      margin-bottom: 12px;
-    }
-
-    .trust-card h4 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-
-    .trust-card p {
-      color: var(--wf-text-muted);
-      font-size: 0.875rem;
-    }
-
-    /* === TESTIMONIALS === */
     .testimonials-section { background: var(--wf-surface); }
-
-    .testimonials-grid {
-      display: grid;
-      gap: 24px;
-    }
-
+    .testimonials-grid { display: grid; gap: 24px; }
     @media (min-width: 768px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
-
-    .testimonial-card {
-      background: var(--wf-bg);
-      border: 1px solid var(--wf-border);
-      border-radius: 12px;
-      padding: 36px;
-    }
-
-    .testimonial-stars {
-      color: var(--wf-accent);
-      font-size: 16px;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-    }
-
-    .testimonial-quote {
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .testimonial-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--wf-placeholder);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      color: var(--wf-placeholder-text);
-    }
-
+    .testimonial-card { background: var(--wf-bg); border: 1px solid var(--wf-border); border-radius: 12px; padding: 36px; }
+    .testimonial-stars { color: var(--wf-accent); font-size: 16px; letter-spacing: 2px; margin-bottom: 16px; }
+    .testimonial-quote { font-size: 1rem; line-height: 1.7; margin-bottom: 24px; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--wf-placeholder); }
     .testimonial-name { font-weight: 600; }
     .testimonial-role { font-size: 0.8rem; color: var(--wf-text-muted); }
 
-    /* === FAQ === */
     .faq-section { background: var(--wf-surface); }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--wf-border); padding: 24px 0; }
+    .faq-question { font-family: 'DM Sans', sans-serif; font-size: 1.125rem; font-weight: 600; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+    .faq-question::after { content: '+'; font-size: 1.25rem; color: var(--wf-accent); }
+    .faq-answer { color: var(--wf-text-muted); font-size: 0.95rem; line-height: 1.7; }
 
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--wf-border);
-      padding: 24px 0;
-    }
-
-    .faq-question {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.125rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .faq-question::after {
-      content: '+';
-      font-size: 1.25rem;
-      color: var(--wf-accent);
-    }
-
-    .faq-answer {
-      color: var(--wf-text-muted);
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    /* === FINAL CTA === */
-    .final-cta {
-      text-align: center;
-      padding: 80px 0 100px;
-    }
-
-    .final-cta h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-    }
-
+    .final-cta { text-align: center; padding: 80px 0 100px; }
+    .final-cta h2 { font-size: 2rem; margin-bottom: 16px; }
     @media (min-width: 768px) { .final-cta h2 { font-size: 2.5rem; } }
+    .final-cta p { color: var(--wf-text-muted); font-size: 1.125rem; margin-bottom: 32px; }
+    .final-cta-promise { display: flex; justify-content: center; gap: 32px; margin-top: 32px; font-size: 0.9rem; color: var(--wf-text-muted); }
+    .final-cta-promise span { display: flex; align-items: center; gap: 8px; }
+    .final-cta-promise span::before { content: '✓'; color: var(--wf-accent); }
 
-    .final-cta p {
-      color: var(--wf-text-muted);
-      font-size: 1.125rem;
-      margin-bottom: 32px;
-    }
-
-    .final-cta-promise {
-      display: flex;
-      justify-content: center;
-      gap: 32px;
-      margin-top: 32px;
-      font-size: 0.9rem;
-      color: var(--wf-text-muted);
-    }
-
-    .final-cta-promise span {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .final-cta-promise span::before {
-      content: '✓';
-      color: var(--wf-accent);
-    }
-
-    /* === FOOTER === */
-    footer {
-      background: var(--wf-dark-bg);
-      color: var(--wf-dark-text);
-      padding: 64px 0 40px;
-    }
-
-    .footer-grid {
-      display: grid;
-      gap: 40px;
-    }
-
+    footer { background: var(--wf-dark-bg); color: var(--wf-dark-text); padding: 64px 0 40px; }
+    .footer-grid { display: grid; gap: 40px; }
     @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
-
     .footer-brand h3 { font-size: 1.25rem; margin-bottom: 12px; }
     .footer-brand p { color: var(--wf-dark-muted); font-size: 0.875rem; }
     .footer-links h4 { font-size: 0.875rem; margin-bottom: 16px; }
     .footer-links ul { list-style: none; }
     .footer-links li { margin-bottom: 10px; }
     .footer-links a { color: var(--wf-dark-muted); font-size: 0.875rem; }
-    .footer-links a:hover { color: var(--wf-dark-text); }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin-top: 48px;
-      padding-top: 24px;
-      text-align: center;
-      color: var(--wf-dark-muted);
-      font-size: 0.8rem;
-    }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 48px; padding-top: 24px; text-align: center; color: var(--wf-dark-muted); font-size: 0.8rem; }
   </style>
 </head>
 <body>
 
-<!-- WIREFRAME BAR -->
 <div class="wf-bar">
-  <span>📐 WIREFRAME — Enterprise v1 — Feb 14, 2026 — Mid-fidelity UX focus</span>
+  <span>📐 WIREFRAME — Enterprise v2 — Feb 14, 2026 — Real copy</span>
   <button onclick="document.body.classList.toggle('wf-mobile')">Toggle Mobile</button>
 </div>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="container nav-inner">
     <div class="nav-logo">[LOGO]</div>
     <ul class="nav-links">
       <li><a href="/ecommerce">Ecommerce</a></li>
       <li><a href="/marketing">Marketing</a></li>
-      <li><a href="/enterprise" class="active" style="color: var(--wf-text);">Enterprise</a></li>
+      <li><a href="/enterprise" class="active">Enterprise</a></li>
       <li><a href="/work">Work</a></li>
       <li><a href="/about">About</a></li>
     </ul>
@@ -702,16 +164,15 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">Enterprise IT Services</div>
       <h1>IT that actually works</h1>
-      <p class="hero-sub">10 services. One accountable partner. Fixed pricing. No surprises. Enterprise-grade IT management for growing companies who are done with unreliable vendors.</p>
+      <p class="hero-sub">10 enterprise services. One accountable partner. Fixed pricing. No hourly billing surprises. Enterprise-grade IT management for growing companies who are done with unreliable vendors.</p>
       
       <div class="hero-ctas">
-        <button class="btn-primary">Get IT Assessment →</button>
+        <button class="btn-primary">Get Your Free IT Assessment</button>
         <button class="btn-secondary">Download Services Overview</button>
       </div>
       
@@ -719,24 +180,23 @@
         <div class="promise-item">
           <div class="promise-icon">💰</div>
           <h4 class="promise-title">Fixed Monthly Pricing</h4>
-          <p class="promise-text">No hourly billing surprises. Know your IT costs upfront.</p>
+          <p class="promise-text">No hourly billing surprises. Know your IT costs upfront, every month.</p>
         </div>
         <div class="promise-item">
           <div class="promise-icon">🎯</div>
           <h4 class="promise-title">Single Point of Contact</h4>
-          <p class="promise-text">One partner for all IT. No vendor juggling.</p>
+          <p class="promise-text">One partner for all IT. No more juggling five vendors and pointing fingers.</p>
         </div>
         <div class="promise-item">
           <div class="promise-icon">⚡</div>
           <h4 class="promise-title">24/7 Support</h4>
-          <p class="promise-text">Round-the-clock coverage. We're always on.</p>
+          <p class="promise-text">Round-the-clock coverage. We're always on, so you don't have to be.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 10 SERVICES -->
 <section>
   <div class="container">
     <div class="section-header center">
@@ -749,27 +209,27 @@
       <div class="service-card">
         <div class="service-icon">🖥️</div>
         <h3>Managed IT</h3>
-        <p>Proactive monitoring and management of your IT environment.</p>
+        <p>Proactive monitoring, maintenance, and management of your entire IT environment.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">☁️</div>
         <h3>Cloud Services</h3>
-        <p>Migration, management, optimization across AWS, Azure, GCP.</p>
+        <p>Migration, management, and optimization across AWS, Azure, and Google Cloud.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🔒</div>
         <h3>Cybersecurity</h3>
-        <p>Threat protection, compliance, audits, incident response.</p>
+        <p>Threat protection, compliance, security audits, and incident response.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🌐</div>
         <h3>Network</h3>
-        <p>Design, deployment, and management of secure networks.</p>
+        <p>Design, deployment, and management of secure, high-performance networks.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">📞</div>
         <h3>Helpdesk</h3>
-        <p>24/7 technical support. Fast resolution, happy users.</p>
+        <p>24/7 technical support for your team. Fast resolution, happy users.</p>
       </div>
     </div>
     
@@ -777,33 +237,32 @@
       <div class="service-card">
         <div class="service-icon">💾</div>
         <h3>Backup & DR</h3>
-        <p>Automated backups, disaster recovery, business continuity.</p>
+        <p>Automated backups, disaster recovery planning, and business continuity.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">📧</div>
-        <h3>Email & Collab</h3>
-        <p>Microsoft 365, Google Workspace management.</p>
+        <h3>Email & Collaboration</h3>
+        <p>Microsoft 365, Google Workspace, and collaboration platform management.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">📱</div>
         <h3>Mobile & Devices</h3>
-        <p>MDM, device procurement, lifecycle management.</p>
+        <p>MDM, device procurement, lifecycle management, and remote work enablement.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🔌</div>
         <h3>Integrations</h3>
-        <p>Connect systems. Automate workflows. Eliminate silos.</p>
+        <p>Connect your business systems. Automate workflows. Eliminate data silos.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">📊</div>
         <h3>IT Strategy</h3>
-        <p>Roadmaps, budgeting, vendor management, leadership.</p>
+        <p>Roadmaps, budgeting, vendor management, and technology leadership.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPARISON -->
 <section class="comparison-section">
   <div class="container">
     <div class="section-header center">
@@ -814,44 +273,43 @@
     <div class="comparison-table">
       <div class="comparison-header">
         <span></span>
-        <span>Us</span>
+        <span>Autonomous</span>
         <span>Typical MSP</span>
       </div>
       <div class="comparison-row">
-        <span>Fixed monthly pricing</span>
-        <span class="check">✓</span>
+        <span>Pricing</span>
+        <span class="check">Fixed monthly</span>
         <span class="x">Usually hourly</span>
       </div>
       <div class="comparison-row">
-        <span>Single point of contact</span>
-        <span class="check">✓</span>
+        <span>Accountability</span>
+        <span class="check">Single point of contact</span>
         <span class="x">Multiple vendors</span>
       </div>
       <div class="comparison-row">
-        <span>Proactive monitoring</span>
-        <span class="check">✓</span>
+        <span>Approach</span>
+        <span class="check">Proactive monitoring</span>
         <span class="x">Reactive only</span>
       </div>
       <div class="comparison-row">
-        <span>Modern cloud-first approach</span>
-        <span class="check">✓</span>
+        <span>Technology</span>
+        <span class="check">Modern cloud-first</span>
         <span class="x">Legacy focused</span>
       </div>
       <div class="comparison-row">
-        <span>Transparent SLAs</span>
-        <span class="check">✓</span>
+        <span>SLAs</span>
+        <span class="check">Transparent, guaranteed</span>
         <span class="x">Vague promises</span>
       </div>
       <div class="comparison-row">
-        <span>Strategic IT guidance</span>
-        <span class="check">✓</span>
+        <span>Strategic value</span>
+        <span class="check">IT guidance included</span>
         <span class="x">Break-fix only</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
 <section>
   <div class="container">
     <div class="section-header center">
@@ -882,7 +340,7 @@
         <h3 class="pricing-name">Complete</h3>
         <p class="pricing-for">For teams of 25-200</p>
         <div class="pricing-price">$250 <span>/ user / month</span></div>
-        <p class="pricing-desc">Full-stack IT with strategic support.</p>
+        <p class="pricing-desc">Full-stack IT management with strategic support.</p>
         <ul class="pricing-features">
           <li>Everything in Essentials</li>
           <li>24/7 helpdesk support</li>
@@ -898,7 +356,6 @@
   </div>
 </section>
 
-<!-- TRUST STATS -->
 <section style="background: var(--wf-surface);">
   <div class="container">
     <div class="trust-grid">
@@ -910,18 +367,17 @@
       <div class="trust-card">
         <div class="trust-number">&lt;15min</div>
         <h4>Average Response</h4>
-        <p>Critical issues acknowledged in under 15 minutes.</p>
+        <p>Critical issues acknowledged in under 15 minutes. Always.</p>
       </div>
       <div class="trust-card">
         <div class="trust-number">94%</div>
         <h4>First-Call Resolution</h4>
-        <p>Most issues resolved on the first contact.</p>
+        <p>Most issues resolved on the first contact. No escalation ping-pong.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="testimonials-section">
   <div class="container">
     <div class="section-header center">
@@ -934,7 +390,7 @@
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-quote">"We went from three IT vendors and constant headaches to one partner who handles everything. Our team is happier, our systems are more reliable, and I finally have time to focus on growing the business."</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">[Photo]</div>
+          <div class="testimonial-avatar"></div>
           <div>
             <div class="testimonial-name">James Morrison</div>
             <div class="testimonial-role">CEO, [Manufacturing Company]</div>
@@ -946,7 +402,7 @@
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-quote">"The fixed pricing changed everything for us. We finally have IT costs we can budget around. And the service is genuinely better than what we were paying double for before."</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">[Photo]</div>
+          <div class="testimonial-avatar"></div>
           <div>
             <div class="testimonial-name">Linda Okafor</div>
             <div class="testimonial-role">CFO, [Professional Services Firm]</div>
@@ -957,7 +413,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq-section">
   <div class="container">
     <div class="section-header center">
@@ -972,7 +427,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-question">How long does onboarding take?</div>
-        <p class="faq-answer">Typically 2-4 weeks depending on complexity. We run parallel with your existing IT during transition to ensure zero disruption.</p>
+        <p class="faq-answer">Typically 2-4 weeks depending on your environment complexity. We run parallel with your existing IT during transition to ensure zero disruption.</p>
       </div>
       <div class="faq-item">
         <div class="faq-question">What if we have existing IT staff?</div>
@@ -986,12 +441,11 @@
   </div>
 </section>
 
-<!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
     <h2>Ready for IT that just works?</h2>
     <p>Free IT assessment. We'll audit your current setup and show you exactly where improvements can be made.</p>
-    <button class="btn-primary">Get Your Free IT Assessment →</button>
+    <button class="btn-primary">Get Your Free IT Assessment</button>
     
     <div class="final-cta-promise">
       <span>No commitment</span>
@@ -1001,12 +455,11 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>[Company Name]</h3>
+        <h3>Autonomous</h3>
         <p>Canadian Expertise. Pakistani Efficiency.<br>World-class Quality.</p>
       </div>
       <div class="footer-links">
@@ -1034,25 +487,9 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 [Company Name]. All rights reserved.</div>
+    <div class="footer-bottom">© 2026 Autonomous Technologies Inc. All rights reserved.</div>
   </div>
 </footer>
-
-<!--
-SECTION_MANIFEST:
-[
-  {"order":1,"section":"Navigation","component":"Header"},
-  {"order":2,"section":"Hero","component":"CenteredHero","props":{"promise":3}},
-  {"order":3,"section":"Services","component":"ServicesGrid","props":{"count":10}},
-  {"order":4,"section":"Comparison","component":"ComparisonTable","props":{"rows":6}},
-  {"order":5,"section":"Pricing","component":"PricingCards","props":{"tiers":2}},
-  {"order":6,"section":"Trust Stats","component":"TrustGrid","props":{"count":3}},
-  {"order":7,"section":"Testimonials","component":"TestimonialsGrid","props":{"count":2}},
-  {"order":8,"section":"FAQ","component":"FAQList","props":{"count":4}},
-  {"order":9,"section":"Final CTA","component":"CenteredCTA","props":{"promise":3}},
-  {"order":10,"section":"Footer","component":"Footer"}
-]
--->
 
 </body>
 </html>

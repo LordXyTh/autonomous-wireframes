@@ -3,696 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketing — Wireframe v1</title>
+  <title>Marketing — Wireframe v2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* === WIREFRAME BAR === */
-    .wf-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      background: #F59E0B;
-      color: #000;
-      font-family: 'Courier New', monospace;
-      font-size: 12px;
-      padding: 8px 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .wf-bar button {
-      background: #000;
-      color: #F59E0B;
-      border: none;
-      padding: 4px 12px;
-      font-size: 11px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    body.wf-mobile {
-      max-width: 375px;
-      margin: 0 auto;
-      box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
-    }
-
-    /* === RESET & PALETTE === */
+    .wf-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #F59E0B; color: #000; font-family: 'Courier New', monospace; font-size: 12px; padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; }
+    .wf-bar button { background: #000; color: #F59E0B; border: none; padding: 4px 12px; font-size: 11px; cursor: pointer; border-radius: 4px; }
+    body.wf-mobile { max-width: 375px; margin: 0 auto; box-shadow: 0 0 0 9999px rgba(0,0,0,0.5); }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    :root {
-      --wf-white: #FFFFFF;
-      --wf-bg: #F8F9FA;
-      --wf-surface: #FFFFFF;
-      --wf-border: #E2E5E9;
-      --wf-text: #1A1D23;
-      --wf-text-muted: #5F6B7A;
-      --wf-text-light: #8E99A8;
-      --wf-accent: #2563EB;
-      --wf-accent-light: #EFF6FF;
-      --wf-dark-bg: #111318;
-      --wf-dark-text: #F1F3F5;
-      --wf-dark-muted: #9CA3AF;
-      --wf-placeholder: #D1D5DB;
-      --wf-placeholder-text: #6B7280;
-    }
-
+    :root { --wf-bg: #F8F9FA; --wf-surface: #FFFFFF; --wf-border: #E2E5E9; --wf-text: #1A1D23; --wf-text-muted: #5F6B7A; --wf-text-light: #8E99A8; --wf-accent: #2563EB; --wf-accent-light: #EFF6FF; --wf-dark-bg: #111318; --wf-dark-text: #F1F3F5; --wf-dark-muted: #9CA3AF; --wf-placeholder: #D1D5DB; }
     html { scroll-behavior: smooth; }
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--wf-bg);
-      color: var(--wf-text);
-      line-height: 1.6;
-      padding-top: 36px;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-
+    body { font-family: 'Inter', sans-serif; background: var(--wf-bg); color: var(--wf-text); line-height: 1.6; padding-top: 36px; }
+    h1, h2, h3, h4 { font-family: 'DM Sans', sans-serif; font-weight: 600; line-height: 1.2; }
     a { color: var(--wf-accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
     @media (min-width: 768px) { .container { padding: 0 24px; } }
     @media (min-width: 1024px) { .container { padding: 0 32px; } }
 
-    /* === NAV === */
-    .nav {
-      position: fixed;
-      top: 36px;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 16px 0;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--wf-border);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo {
-      width: 140px;
-      height: 36px;
-      background: var(--wf-placeholder);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      color: var(--wf-placeholder-text);
-    }
-
-    .nav-links {
-      display: none;
-      gap: 32px;
-      list-style: none;
-    }
-
+    .nav { position: fixed; top: 36px; left: 0; right: 0; z-index: 100; padding: 16px 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--wf-border); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { width: 140px; height: 36px; background: var(--wf-placeholder); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #6B7280; }
+    .nav-links { display: none; gap: 32px; list-style: none; }
     @media (min-width: 1024px) { .nav-links { display: flex; } }
-
-    .nav-links a {
-      color: var(--wf-text-muted);
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover, .nav-links a.active { color: var(--wf-text); text-decoration: none; }
-
-    .nav-cta {
-      background: var(--wf-accent);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .nav-hamburger {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-    }
-
-    .nav-hamburger span {
-      width: 24px;
-      height: 2px;
-      background: var(--wf-text);
-    }
-
+    .nav-links a { color: var(--wf-text-muted); font-size: 14px; font-weight: 500; }
+    .nav-links a.active { color: var(--wf-text); }
+    .nav-cta { background: var(--wf-accent); color: white; padding: 10px 20px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; border: none; cursor: pointer; }
+    .nav-hamburger { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-hamburger span { width: 24px; height: 2px; background: var(--wf-text); }
     @media (min-width: 1024px) { .nav-hamburger { display: none; } }
 
-    /* === HERO === */
-    .hero {
-      background: var(--wf-surface);
-      padding: 120px 0 80px;
-    }
-
+    .hero { background: var(--wf-surface); padding: 120px 0 80px; }
     @media (min-width: 768px) { .hero { padding: 140px 0 100px; } }
-
-    .hero-grid {
-      display: grid;
-      gap: 48px;
-      align-items: center;
-    }
-
-    @media (min-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
-    }
-
-    .hero-eyebrow {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--wf-accent);
-      margin-bottom: 16px;
-    }
-
-    .hero h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
+    .hero-grid { display: grid; gap: 48px; align-items: center; }
+    @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 64px; } }
+    .hero-eyebrow { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--wf-accent); margin-bottom: 16px; }
+    .hero h1 { font-size: 2.25rem; font-weight: 700; margin-bottom: 20px; }
     @media (min-width: 768px) { .hero h1 { font-size: 2.75rem; } }
     @media (min-width: 1024px) { .hero h1 { font-size: 3.25rem; } }
+    .hero-sub { font-size: 1.125rem; color: var(--wf-text-muted); margin-bottom: 32px; max-width: 500px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+    .btn-primary { background: var(--wf-accent); color: white; padding: 14px 28px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px; border: none; cursor: pointer; }
+    .btn-secondary { background: white; color: var(--wf-text); padding: 14px 28px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px; border: 1px solid var(--wf-border); cursor: pointer; }
+    .trust-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+    .trust-label { font-size: 12px; color: var(--wf-text-light); }
+    .trust-logo { width: 80px; height: 28px; background: var(--wf-placeholder); border-radius: 4px; }
+    .hero-image { aspect-ratio: 16/10; background: var(--wf-placeholder); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #6B7280; }
 
-    .hero-sub {
-      font-size: 1.125rem;
-      color: var(--wf-text-muted);
-      margin-bottom: 32px;
-      max-width: 500px;
-    }
-
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-
-    .btn-primary {
-      background: var(--wf-accent);
-      color: white;
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 15px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-secondary {
-      background: white;
-      color: var(--wf-text);
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 15px;
-      border: 1px solid var(--wf-border);
-      cursor: pointer;
-    }
-
-    .trust-logos {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .trust-label {
-      font-size: 12px;
-      color: var(--wf-text-light);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .trust-logo {
-      width: 80px;
-      height: 28px;
-      background: var(--wf-placeholder);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 9px;
-      color: var(--wf-placeholder-text);
-    }
-
-    .hero-image {
-      aspect-ratio: 16/10;
-      background: var(--wf-placeholder);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: var(--wf-placeholder-text);
-    }
-
-    /* === SECTIONS === */
     section { padding: 64px 0; }
     @media (min-width: 768px) { section { padding: 96px 0; } }
     @media (min-width: 1024px) { section { padding: 120px 0; } }
-
     .section-header { margin-bottom: 48px; }
     .section-header.center { text-align: center; }
-
-    .section-eyebrow {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--wf-accent);
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: 1.875rem;
-      margin-bottom: 12px;
-    }
-
+    .section-eyebrow { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--wf-accent); margin-bottom: 12px; }
+    .section-title { font-size: 1.875rem; margin-bottom: 12px; }
     @media (min-width: 1024px) { .section-title { font-size: 2.25rem; } }
-
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--wf-text-muted);
-      max-width: 600px;
-    }
-
+    .section-subtitle { font-size: 1.1rem; color: var(--wf-text-muted); max-width: 600px; }
     .section-header.center .section-subtitle { margin: 0 auto; }
 
-    /* === PAIN POINTS === */
     .pain-section { background: var(--wf-surface); }
-
-    .pain-grid {
-      display: grid;
-      gap: 20px;
-    }
-
+    .pain-grid { display: grid; gap: 20px; }
     @media (min-width: 640px) { .pain-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .pain-grid { grid-template-columns: repeat(4, 1fr); } }
+    .pain-card { background: var(--wf-bg); border: 1px solid var(--wf-border); border-radius: 10px; padding: 28px 24px; }
+    .pain-icon { width: 44px; height: 44px; background: var(--wf-accent-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+    .pain-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .pain-card p { color: var(--wf-text-muted); font-size: 0.9rem; }
 
-    .pain-card {
-      background: var(--wf-bg);
-      border: 1px solid var(--wf-border);
-      border-radius: 10px;
-      padding: 28px 24px;
-    }
+    .services-list { display: grid; gap: 1px; background: var(--wf-border); border: 1px solid var(--wf-border); border-radius: 12px; overflow: hidden; }
+    .service-row { background: var(--wf-surface); display: grid; gap: 24px; padding: 32px; align-items: center; }
+    @media (min-width: 768px) { .service-row { grid-template-columns: 180px 1fr 120px; } }
+    .service-name { font-family: 'DM Sans', sans-serif; font-size: 1.125rem; font-weight: 600; }
+    .service-desc { color: var(--wf-text-muted); font-size: 0.95rem; }
+    .service-link { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; color: var(--wf-accent); }
 
-    .pain-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--wf-accent-light);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-
-    .pain-card h3 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-
-    .pain-card p {
-      color: var(--wf-text-muted);
-      font-size: 0.9rem;
-    }
-
-    /* === SERVICES LIST === */
-    .services-list {
-      display: grid;
-      gap: 1px;
-      background: var(--wf-border);
-      border: 1px solid var(--wf-border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .service-row {
-      background: var(--wf-surface);
-      display: grid;
-      gap: 24px;
-      padding: 32px;
-      align-items: center;
-    }
-
-    @media (min-width: 768px) {
-      .service-row { grid-template-columns: 180px 1fr 120px; }
-    }
-
-    .service-name {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.125rem;
-      font-weight: 600;
-    }
-
-    .service-desc {
-      color: var(--wf-text-muted);
-      font-size: 0.95rem;
-    }
-
-    .service-link {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      color: var(--wf-accent);
-    }
-
-    /* === TWO TRACKS === */
     .tracks-section { background: var(--wf-surface); }
-
-    .tracks-grid {
-      display: grid;
-      gap: 24px;
-    }
-
+    .tracks-grid { display: grid; gap: 24px; }
     @media (min-width: 768px) { .tracks-grid { grid-template-columns: repeat(2, 1fr); } }
+    .track-card { background: var(--wf-bg); border: 1px solid var(--wf-border); border-radius: 12px; padding: 40px 32px; position: relative; }
+    .track-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--wf-accent); border-radius: 12px 12px 0 0; }
+    .track-badge { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; background: var(--wf-accent-light); color: var(--wf-accent); padding: 6px 12px; border-radius: 4px; margin-bottom: 20px; }
+    .track-card h3 { font-size: 1.375rem; margin-bottom: 12px; }
+    .track-card > p { color: var(--wf-text-muted); margin-bottom: 28px; }
+    .track-features { list-style: none; margin-bottom: 28px; }
+    .track-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; margin-bottom: 12px; }
+    .track-features li::before { content: '✓'; color: var(--wf-accent); font-weight: 700; }
+    .track-link { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; color: var(--wf-accent); }
 
-    .track-card {
-      background: var(--wf-bg);
-      border: 1px solid var(--wf-border);
-      border-radius: 12px;
-      padding: 40px 32px;
-      position: relative;
-    }
-
-    .track-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--wf-accent);
-      border-radius: 12px 12px 0 0;
-    }
-
-    .track-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      background: var(--wf-accent-light);
-      color: var(--wf-accent);
-      padding: 6px 12px;
-      border-radius: 4px;
-      margin-bottom: 20px;
-    }
-
-    .track-card h3 {
-      font-size: 1.375rem;
-      margin-bottom: 12px;
-    }
-
-    .track-card > p {
-      color: var(--wf-text-muted);
-      margin-bottom: 28px;
-    }
-
-    .track-features {
-      list-style: none;
-      margin-bottom: 28px;
-    }
-
-    .track-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.95rem;
-      margin-bottom: 12px;
-    }
-
-    .track-features li::before {
-      content: '✓';
-      color: var(--wf-accent);
-      font-weight: 700;
-    }
-
-    .track-link {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      color: var(--wf-accent);
-    }
-
-    /* === PROCESS === */
-    .process-grid {
-      display: grid;
-      gap: 1px;
-      background: var(--wf-border);
-      border: 1px solid var(--wf-border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
+    .process-grid { display: grid; gap: 1px; background: var(--wf-border); border: 1px solid var(--wf-border); border-radius: 12px; overflow: hidden; }
     @media (min-width: 768px) { .process-grid { grid-template-columns: repeat(4, 1fr); } }
+    .process-step { background: var(--wf-surface); padding: 32px 24px; text-align: center; }
+    .process-number { font-family: 'DM Sans', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--wf-accent); margin-bottom: 16px; }
+    .process-step h4 { font-size: 1rem; margin-bottom: 8px; }
+    .process-step p { color: var(--wf-text-muted); font-size: 0.875rem; }
 
-    .process-step {
-      background: var(--wf-surface);
-      padding: 32px 24px;
-      text-align: center;
-    }
-
-    .process-number {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--wf-accent);
-      margin-bottom: 16px;
-    }
-
-    .process-step h4 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-
-    .process-step p {
-      color: var(--wf-text-muted);
-      font-size: 0.875rem;
-    }
-
-    /* === STATS === */
-    .stats-bar {
-      background: var(--wf-surface);
-      border: 1px solid var(--wf-border);
-      border-radius: 12px;
-      padding: 40px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-    }
-
+    .stats-bar { background: var(--wf-surface); border: 1px solid var(--wf-border); border-radius: 12px; padding: 40px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
     @media (min-width: 768px) { .stats-bar { grid-template-columns: repeat(4, 1fr); } }
-
     .stat-item { text-align: center; }
+    .stat-value { font-family: 'DM Sans', sans-serif; font-size: 2.25rem; font-weight: 700; color: var(--wf-accent); }
+    .stat-label { font-size: 0.8rem; color: var(--wf-text-light); margin-top: 4px; }
 
-    .stat-value {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: var(--wf-accent);
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--wf-text-light);
-      margin-top: 4px;
-    }
-
-    /* === TESTIMONIAL === */
-    .testimonial-feature {
-      background: var(--wf-accent-light);
-      border: 1px solid var(--wf-border);
-      border-radius: 16px;
-      padding: 48px 40px;
-      text-align: center;
-    }
-
-    .testimonial-quote {
-      font-size: 1.375rem;
-      line-height: 1.6;
-      margin-bottom: 28px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
-
-    .testimonial-avatar {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--wf-placeholder);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      color: var(--wf-placeholder-text);
-    }
-
+    .testimonial-feature { background: var(--wf-accent-light); border: 1px solid var(--wf-border); border-radius: 16px; padding: 48px 40px; text-align: center; }
+    .testimonial-quote { font-size: 1.375rem; line-height: 1.6; margin-bottom: 28px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .testimonial-author { display: flex; align-items: center; justify-content: center; gap: 16px; }
+    .testimonial-avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--wf-placeholder); }
     .testimonial-info { text-align: left; }
     .testimonial-name { font-weight: 600; }
     .testimonial-role { font-size: 0.875rem; color: var(--wf-text-muted); }
 
-    /* === CASES === */
-    .cases-grid {
-      display: grid;
-      gap: 24px;
-    }
-
+    .cases-grid { display: grid; gap: 24px; }
     @media (min-width: 768px) { .cases-grid { grid-template-columns: repeat(2, 1fr); } }
-
-    .case-card {
-      background: var(--wf-surface);
-      border: 1px solid var(--wf-border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .case-image {
-      aspect-ratio: 16/9;
-      background: var(--wf-placeholder);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      color: var(--wf-placeholder-text);
-    }
-
+    .case-card { background: var(--wf-surface); border: 1px solid var(--wf-border); border-radius: 12px; overflow: hidden; }
+    .case-image { aspect-ratio: 16/9; background: var(--wf-placeholder); display: flex; align-items: center; justify-content: center; font-size: 13px; color: #6B7280; }
     .case-content { padding: 28px; }
-
-    .case-tag {
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--wf-accent);
-      margin-bottom: 10px;
-    }
-
-    .case-title {
-      font-size: 1.125rem;
-      margin-bottom: 16px;
-    }
-
+    .case-tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--wf-accent); margin-bottom: 10px; }
+    .case-title { font-size: 1.125rem; margin-bottom: 16px; }
     .case-metrics { display: flex; gap: 32px; }
+    .case-metric-value { font-family: 'DM Sans', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--wf-accent); }
+    .case-metric-label { font-size: 0.75rem; color: var(--wf-text-light); }
 
-    .case-metric-value {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--wf-accent);
-    }
-
-    .case-metric-label {
-      font-size: 0.75rem;
-      color: var(--wf-text-light);
-    }
-
-    /* === FINAL CTA === */
-    .final-cta {
-      background: var(--wf-surface);
-      text-align: center;
-      padding: 80px 0 100px;
-    }
-
-    .final-cta h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-    }
-
+    .final-cta { background: var(--wf-surface); text-align: center; padding: 80px 0 100px; }
+    .final-cta h2 { font-size: 2rem; margin-bottom: 16px; }
     @media (min-width: 768px) { .final-cta h2 { font-size: 2.5rem; } }
+    .final-cta p { color: var(--wf-text-muted); font-size: 1.125rem; margin-bottom: 32px; }
 
-    .final-cta p {
-      color: var(--wf-text-muted);
-      font-size: 1.125rem;
-      margin-bottom: 32px;
-    }
-
-    /* === FOOTER === */
-    footer {
-      background: var(--wf-dark-bg);
-      color: var(--wf-dark-text);
-      padding: 64px 0 40px;
-    }
-
-    .footer-grid {
-      display: grid;
-      gap: 40px;
-    }
-
+    footer { background: var(--wf-dark-bg); color: var(--wf-dark-text); padding: 64px 0 40px; }
+    .footer-grid { display: grid; gap: 40px; }
     @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
-
     .footer-brand h3 { font-size: 1.25rem; margin-bottom: 12px; }
     .footer-brand p { color: var(--wf-dark-muted); font-size: 0.875rem; }
     .footer-links h4 { font-size: 0.875rem; margin-bottom: 16px; }
     .footer-links ul { list-style: none; }
     .footer-links li { margin-bottom: 10px; }
     .footer-links a { color: var(--wf-dark-muted); font-size: 0.875rem; }
-    .footer-links a:hover { color: var(--wf-dark-text); }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin-top: 48px;
-      padding-top: 24px;
-      text-align: center;
-      color: var(--wf-dark-muted);
-      font-size: 0.8rem;
-    }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 48px; padding-top: 24px; text-align: center; color: var(--wf-dark-muted); font-size: 0.8rem; }
   </style>
 </head>
 <body>
 
-<!-- WIREFRAME BAR -->
 <div class="wf-bar">
-  <span>📐 WIREFRAME — Marketing v1 — Feb 14, 2026 — Mid-fidelity UX focus</span>
+  <span>📐 WIREFRAME — Marketing v2 — Feb 14, 2026 — Real copy</span>
   <button onclick="document.body.classList.toggle('wf-mobile')">Toggle Mobile</button>
 </div>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="container nav-inner">
     <div class="nav-logo">[LOGO]</div>
     <ul class="nav-links">
       <li><a href="/ecommerce">Ecommerce</a></li>
-      <li><a href="/marketing" class="active" style="color: var(--wf-text);">Marketing</a></li>
+      <li><a href="/marketing" class="active">Marketing</a></li>
       <li><a href="/enterprise">Enterprise</a></li>
       <li><a href="/work">Work</a></li>
       <li><a href="/about">About</a></li>
@@ -704,35 +162,32 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
       <div>
         <p class="hero-eyebrow">Marketing</p>
         <h1>Finally know what's working</h1>
-        <p class="hero-sub">Attribution that survives iOS. Analytics you can trust. Automation that scales. For marketing teams and agencies who need clarity, not just dashboards.</p>
+        <p class="hero-sub">Attribution that survives iOS. Analytics you can trust. Automation that scales. For marketing teams who need clarity, not just dashboards — and agencies who need execution power.</p>
         
         <div class="hero-ctas">
-          <button class="btn-primary">Get Attribution Audit →</button>
+          <button class="btn-primary">Get Your Free Attribution Audit</button>
           <button class="btn-secondary">See Marketing Work</button>
         </div>
         
         <div class="trust-logos">
           <span class="trust-label">Trusted by</span>
-          <div class="trust-logo">[Agency]</div>
-          <div class="trust-logo">[Brand]</div>
-          <div class="trust-logo">[Brand]</div>
-          <div class="trust-logo">[Agency]</div>
+          <div class="trust-logo"></div>
+          <div class="trust-logo"></div>
+          <div class="trust-logo"></div>
+          <div class="trust-logo"></div>
         </div>
       </div>
-      
       <div class="hero-image">[Attribution Dashboard Screenshot]</div>
     </div>
   </div>
 </section>
 
-<!-- PAIN POINTS -->
 <section class="pain-section">
   <div class="container">
     <div class="section-header center">
@@ -744,28 +199,27 @@
       <div class="pain-card">
         <div class="pain-icon">🔥</div>
         <h3>iOS broke everything</h3>
-        <p>Your Facebook ROAS tanked. Your attribution is garbage. You're flying blind.</p>
+        <p>Your Facebook ROAS tanked overnight. Your attribution is garbage. You're flying blind on a six-figure ad budget.</p>
       </div>
       <div class="pain-card">
         <div class="pain-icon">📊</div>
         <h3>Data doesn't match</h3>
-        <p>GA4 says one thing. Ad platforms say another. Nobody trusts the numbers.</p>
+        <p>GA4 says one thing. Your ad platforms say another. Finance asks for numbers and nobody trusts what you send them.</p>
       </div>
       <div class="pain-card">
         <div class="pain-icon">🤷</div>
         <h3>"Which channel works?"</h3>
-        <p>Spending $50K/mo on ads but can't answer the simplest question.</p>
+        <p>You're spending $50K/mo on ads but can't answer the simplest question your CEO asks.</p>
       </div>
       <div class="pain-card">
         <div class="pain-icon">⏰</div>
         <h3>Manual everything</h3>
-        <p>Your team is drowning in spreadsheets. Reporting takes days, not minutes.</p>
+        <p>Your team is drowning in spreadsheets. Reporting takes days, not minutes. You're paying senior marketers to copy-paste.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section>
   <div class="container">
     <div class="section-header">
@@ -777,17 +231,17 @@
     <div class="services-list">
       <div class="service-row">
         <h3 class="service-name">Attribution</h3>
-        <p class="service-desc">Server-side tracking. Multi-touch models. Post-iOS clarity. Know which channels actually drive revenue.</p>
+        <p class="service-desc">Server-side tracking. Multi-touch models. Post-iOS clarity. Know which channels actually drive revenue, not just last-click conversions.</p>
         <a href="#" class="service-link">Learn more →</a>
       </div>
       <div class="service-row">
         <h3 class="service-name">Analytics</h3>
-        <p class="service-desc">GA4 done right. Custom dashboards. Data that marketing and finance both trust.</p>
+        <p class="service-desc">GA4 done right. Custom dashboards for every stakeholder. Data that marketing and finance both trust.</p>
         <a href="#" class="service-link">Learn more →</a>
       </div>
       <div class="service-row">
         <h3 class="service-name">CDP</h3>
-        <p class="service-desc">Unified customer profiles. Real-time segments. Personalization across every channel.</p>
+        <p class="service-desc">Unified customer profiles. Real-time segments. Personalization that works across email, ads, and on-site.</p>
         <a href="#" class="service-link">Learn more →</a>
       </div>
       <div class="service-row">
@@ -804,7 +258,6 @@
   </div>
 </section>
 
-<!-- TWO TRACKS -->
 <section class="tracks-section">
   <div class="container">
     <div class="section-header center">
@@ -816,33 +269,32 @@
       <div class="track-card">
         <span class="track-badge">For Brands</span>
         <h3>Marketing Teams</h3>
-        <p>You have ads running. You need clarity on what's working and systems that scale.</p>
+        <p>You have ads running. You need clarity on what's working and systems that scale without adding headcount.</p>
         <ul class="track-features">
           <li>Full attribution setup + ongoing optimization</li>
           <li>Custom analytics dashboards for your KPIs</li>
           <li>Marketing automation implementation</li>
           <li>Technical support as questions arise</li>
         </ul>
-        <a href="#" class="track-link">Learn about brand packages →</a>
+        <a href="#" class="track-link">See brand packages →</a>
       </div>
       
       <div class="track-card">
         <span class="track-badge">For Agencies</span>
         <h3>White-Label Execution</h3>
-        <p>You sell strategy. We handle the technical implementation under your brand.</p>
+        <p>You sell strategy. We handle the technical implementation under your brand. Your clients never know we exist.</p>
         <ul class="track-features">
           <li>White-label tracking + analytics setups</li>
           <li>Overflow capacity when you're slammed</li>
           <li>Technical talent without the overhead</li>
           <li>Transparent pricing, your margins intact</li>
         </ul>
-        <a href="#" class="track-link">Agency partnership details →</a>
+        <a href="#" class="track-link">Explore partnership →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
 <section>
   <div class="container">
     <div class="section-header center">
@@ -875,7 +327,6 @@
   </div>
 </section>
 
-<!-- STATS -->
 <section>
   <div class="container">
     <div class="stats-bar">
@@ -889,7 +340,7 @@
       </div>
       <div class="stat-item">
         <div class="stat-value">$4M+</div>
-        <div class="stat-label">Ad Spend Tracked</div>
+        <div class="stat-label">Ad Spend Tracked Monthly</div>
       </div>
       <div class="stat-item">
         <div class="stat-value">12</div>
@@ -899,13 +350,12 @@
   </div>
 </section>
 
-<!-- TESTIMONIAL -->
 <section>
   <div class="container">
     <div class="testimonial-feature">
       <p class="testimonial-quote">"We went from guessing which channels worked to knowing exactly where every dollar came from. Our ROAS improved 40% just from reallocating spend based on real data."</p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar">[Photo]</div>
+        <div class="testimonial-avatar"></div>
         <div class="testimonial-info">
           <div class="testimonial-name">Sarah Chen</div>
           <div class="testimonial-role">VP Marketing, [SaaS Company]</div>
@@ -915,7 +365,6 @@
   </div>
 </section>
 
-<!-- CASE STUDIES -->
 <section style="background: var(--wf-surface);">
   <div class="container">
     <div class="section-header">
@@ -946,7 +395,7 @@
         <div class="case-image">[Automation Flow Screenshot]</div>
         <div class="case-content">
           <p class="case-tag">Agency · White-Label</p>
-          <h3 class="case-title">50+ client setups without hiring an analyst</h3>
+          <h3 class="case-title">50+ client setups without hiring a single analyst</h3>
           <div class="case-metrics">
             <div>
               <div class="case-metric-value">50+</div>
@@ -963,21 +412,19 @@
   </div>
 </section>
 
-<!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
     <h2>Ready to trust your data again?</h2>
     <p>Free attribution audit. We'll show you exactly what's broken and how to fix it.</p>
-    <button class="btn-primary">Get Your Free Audit →</button>
+    <button class="btn-primary">Get Your Free Audit</button>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>[Company Name]</h3>
+        <h3>Autonomous</h3>
         <p>Canadian Expertise. Pakistani Efficiency.<br>World-class Quality.</p>
       </div>
       <div class="footer-links">
@@ -1005,26 +452,9 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 [Company Name]. All rights reserved.</div>
+    <div class="footer-bottom">© 2026 Autonomous Technologies Inc. All rights reserved.</div>
   </div>
 </footer>
-
-<!--
-SECTION_MANIFEST:
-[
-  {"order":1,"section":"Navigation","component":"Header"},
-  {"order":2,"section":"Hero","component":"VerticalHero","props":{"trustLogos":true}},
-  {"order":3,"section":"Pain Points","component":"PainGrid","props":{"count":4}},
-  {"order":4,"section":"Services","component":"ServicesTable","props":{"count":5}},
-  {"order":5,"section":"Two Tracks","component":"TracksGrid","props":{"count":2}},
-  {"order":6,"section":"Process","component":"ProcessGrid","props":{"steps":4}},
-  {"order":7,"section":"Stats","component":"StatsBar","props":{"count":4}},
-  {"order":8,"section":"Testimonial","component":"TestimonialFeature"},
-  {"order":9,"section":"Case Studies","component":"CasesGrid","props":{"count":2}},
-  {"order":10,"section":"Final CTA","component":"CenteredCTA"},
-  {"order":11,"section":"Footer","component":"Footer"}
-]
--->
 
 </body>
 </html>
