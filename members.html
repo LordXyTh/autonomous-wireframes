@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members — International Democracy Union</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'idu-blue': '#003087', 'idu-mid': '#0057B7', 'idu-bright': '#0071CE',
+            'idu-gold': '#C9A84C', 'idu-grey': '#F4F6F8', 'idu-text': '#1A1A2E',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-idu-grey text-idu-text font-sans">
+
+  <!-- Utility Bar -->
+  <div class="bg-idu-text text-white text-xs py-2 px-6 flex justify-end gap-6">
+    <a href="#" class="hover:text-idu-gold">Member Login</a>
+    <a href="#" class="hover:text-idu-gold">Press Kit</a>
+    <a href="#" class="hover:text-idu-gold">Contact</a>
+  </div>
+
+  <!-- Nav -->
+  <nav class="bg-idu-blue text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 flex items-center h-16 gap-8">
+      <a href="homepage.html" class="flex items-center gap-3 mr-4">
+        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+          <span class="text-idu-blue font-bold text-sm">IDU</span>
+        </div>
+        <span class="font-serif font-bold text-lg tracking-wide hidden md:block">International Democracy Union</span>
+      </a>
+      <div class="flex gap-6 text-sm font-medium ml-auto">
+        <a href="about.html" class="hover:text-idu-gold">About</a>
+        <a href="members.html" class="text-idu-gold border-b-2 border-idu-gold pb-1">Members</a>
+        <a href="news.html" class="hover:text-idu-gold">News</a>
+        <a href="events.html" class="hover:text-idu-gold">Events</a>
+        <a href="leadership.html" class="hover:text-idu-gold">Leadership</a>
+        <a href="media-centre.html" class="hover:text-idu-gold">Media Centre</a>
+      </div>
+      <a href="#" class="ml-4 bg-idu-gold text-idu-text px-4 py-2 rounded text-sm font-semibold">Member Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative h-72 overflow-hidden">
+    <img src="hero-members.png" alt="Member Parties" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-idu-blue/65"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+      <p class="text-idu-gold uppercase tracking-widest text-sm mb-2">Global Alliance</p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold">Member Parties</h1>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="bg-idu-mid text-white py-6">
+    <div class="max-w-3xl mx-auto grid grid-cols-3 gap-6 text-center px-6">
+      <div><div class="text-3xl font-bold font-serif">80+</div><div class="text-sm text-blue-100 uppercase tracking-wider mt-1">Member Parties</div></div>
+      <div><div class="text-3xl font-bold font-serif">6</div><div class="text-sm text-blue-100 uppercase tracking-wider mt-1">Continents</div></div>
+      <div><div class="text-3xl font-bold font-serif">50+</div><div class="text-sm text-blue-100 uppercase tracking-wider mt-1">Countries</div></div>
+    </div>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="bg-white border-b border-gray-200 px-6 py-4 sticky top-16 z-40">
+    <div class="max-w-7xl mx-auto flex flex-wrap gap-3 items-center">
+      <!-- Region filter -->
+      <div class="flex gap-2 flex-wrap text-sm">
+        <button class="bg-idu-blue text-white px-4 py-1.5 rounded-full font-medium">All</button>
+        <button class="bg-idu-grey text-idu-text px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Europe</button>
+        <button class="bg-idu-grey text-idu-text px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Americas</button>
+        <button class="bg-idu-grey text-idu-text px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Africa</button>
+        <button class="bg-idu-grey text-idu-text px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Asia-Pacific</button>
+        <button class="bg-idu-grey text-idu-text px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Middle East</button>
+      </div>
+      <div class="ml-auto flex gap-3 items-center">
+        <select class="text-sm border border-gray-200 rounded px-3 py-1.5 bg-white text-idu-text">
+          <option>All Govt Status</option>
+          <option>In Government</option>
+          <option>In Opposition</option>
+        </select>
+        <input type="text" placeholder="Search parties..." class="text-sm border border-gray-200 rounded px-3 py-1.5 w-48">
+      </div>
+    </div>
+  </div>
+
+  <!-- Member Cards Grid -->
+  <section class="py-12 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+      <!-- Card template -->
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇺🇸</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">Republican Party</h3>
+        <p class="text-sm text-gray-500 mb-1">United States of America</p>
+        <p class="text-xs text-idu-mid mb-3">Chairman: Ronna McDaniel</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇬🇧</div>
+          <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full font-semibold">In Opposition</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">Conservative Party</h3>
+        <p class="text-sm text-gray-500 mb-1">United Kingdom</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Kemi Badenoch</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇩🇪</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">CDU / CSU</h3>
+        <p class="text-sm text-gray-500 mb-1">Germany</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Friedrich Merz</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇦🇺</div>
+          <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full font-semibold">In Opposition</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">Liberal Party of Australia</h3>
+        <p class="text-sm text-gray-500 mb-1">Australia</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Peter Dutton</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇨🇦</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">Conservative Party of Canada</h3>
+        <p class="text-sm text-gray-500 mb-1">Canada</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Pierre Poilievre</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇬🇷</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">New Democracy</h3>
+        <p class="text-sm text-gray-500 mb-1">Greece</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Kyriakos Mitsotakis</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇪🇸</div>
+          <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full font-semibold">In Opposition</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">People's Party (PP)</h3>
+        <p class="text-sm text-gray-500 mb-1">Spain</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Alberto Núñez Feijóo</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇮🇹</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">Fratelli d'Italia</h3>
+        <p class="text-sm text-gray-500 mb-1">Italy</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Giorgia Meloni</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇧🇬</div>
+          <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full font-semibold">In Opposition</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">GERB</h3>
+        <p class="text-sm text-gray-500 mb-1">Bulgaria</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Boyko Borisov</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇭🇷</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">Croatian Democratic Union</h3>
+        <p class="text-sm text-gray-500 mb-1">Croatia</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Andrej Plenković</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇮🇸</div>
+          <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full font-semibold">In Opposition</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">Independence Party</h3>
+        <p class="text-sm text-gray-500 mb-1">Iceland</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Bjarni Benediktsson</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇸🇪</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">Moderate Party</h3>
+        <p class="text-sm text-gray-500 mb-1">Sweden</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Ulf Kristersson</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇳🇿</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">National Party</h3>
+        <p class="text-sm text-gray-500 mb-1">New Zealand</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Christopher Luxon</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇮🇱</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">Likud</h3>
+        <p class="text-sm text-gray-500 mb-1">Israel</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Benjamin Netanyahu</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-12 h-12 bg-idu-grey rounded-lg flex items-center justify-center text-2xl">🇧🇪</div>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">In Government</span>
+        </div>
+        <h3 class="font-bold text-idu-text mb-0.5">N-VA</h3>
+        <p class="text-sm text-gray-500 mb-1">Belgium</p>
+        <p class="text-xs text-idu-mid mb-3">Leader: Bart De Wever</p>
+        <span class="text-xs bg-idu-blue/10 text-idu-blue px-2 py-0.5 rounded-full">Full Member</span>
+        <div class="mt-3"><a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">View Profile →</a></div>
+      </div>
+
+      <!-- More placeholder -->
+      <div class="bg-white/60 rounded-xl border-2 border-dashed border-gray-200 p-5 flex items-center justify-center col-span-1">
+        <div class="text-center text-gray-400">
+          <div class="text-2xl mb-1">+65</div>
+          <div class="text-sm">More members</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center mt-10 gap-2">
+      <button class="w-9 h-9 rounded bg-idu-blue text-white text-sm font-semibold">1</button>
+      <button class="w-9 h-9 rounded bg-white border border-gray-200 text-sm text-idu-text hover:border-idu-mid">2</button>
+      <button class="w-9 h-9 rounded bg-white border border-gray-200 text-sm text-idu-text hover:border-idu-mid">3</button>
+      <button class="w-9 h-9 rounded bg-white border border-gray-200 text-sm text-idu-text hover:border-idu-mid">→</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-idu-blue text-white pt-10 pb-6 px-6 mt-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm text-blue-200">
+      <span>© 2026 International Democracy Union</span>
+      <div class="flex gap-6">
+        <a href="homepage.html" class="hover:text-white">Home</a>
+        <a href="news.html" class="hover:text-white">News</a>
+        <a href="media-centre.html" class="hover:text-white">Media</a>
+        <a href="#" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

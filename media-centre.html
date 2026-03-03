@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Centre — International Democracy Union</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'idu-blue': '#003087', 'idu-mid': '#0057B7', 'idu-bright': '#0071CE',
+            'idu-gold': '#C9A84C', 'idu-grey': '#F4F6F8', 'idu-text': '#1A1A2E',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-idu-grey text-idu-text font-sans">
+
+  <!-- Utility Bar -->
+  <div class="bg-idu-text text-white text-xs py-2 px-6 flex justify-end gap-6">
+    <a href="#" class="hover:text-idu-gold">Member Login</a>
+    <a href="#" class="hover:text-idu-gold">Press Kit</a>
+    <a href="#" class="hover:text-idu-gold">Contact</a>
+  </div>
+
+  <!-- Nav -->
+  <nav class="bg-idu-blue text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 flex items-center h-16 gap-8">
+      <a href="homepage.html" class="flex items-center gap-3 mr-4">
+        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+          <span class="text-idu-blue font-bold text-sm">IDU</span>
+        </div>
+        <span class="font-serif font-bold text-lg tracking-wide hidden md:block">International Democracy Union</span>
+      </a>
+      <div class="flex gap-6 text-sm font-medium ml-auto">
+        <a href="about.html" class="hover:text-idu-gold">About</a>
+        <a href="members.html" class="hover:text-idu-gold">Members</a>
+        <a href="news.html" class="hover:text-idu-gold">News</a>
+        <a href="events.html" class="hover:text-idu-gold">Events</a>
+        <a href="leadership.html" class="hover:text-idu-gold">Leadership</a>
+        <a href="media-centre.html" class="text-idu-gold border-b-2 border-idu-gold pb-1">Media Centre</a>
+      </div>
+      <a href="#" class="ml-4 bg-idu-gold text-idu-text px-4 py-2 rounded text-sm font-semibold">Member Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative h-64 overflow-hidden">
+    <img src="hero-media.png" alt="IDU Media Centre" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-idu-blue/65"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+      <p class="text-idu-gold uppercase tracking-widest text-sm mb-2">Press & Communications</p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold">Media Centre</h1>
+    </div>
+  </section>
+
+  <!-- Press Kit Download Strip -->
+  <div class="bg-idu-text text-white py-6 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h2 class="font-serif text-xl font-bold mb-1">IDU Press Kit 2026</h2>
+        <p class="text-gray-300 text-sm">Official logos, brand assets, leadership bios, fact sheets, and photography — everything you need for accurate IDU coverage.</p>
+      </div>
+      <a href="#" class="shrink-0 bg-idu-gold text-idu-text px-6 py-3 rounded font-bold text-sm hover:bg-yellow-400 transition whitespace-nowrap">
+        Download Press Kit ↓
+      </a>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- Latest Press Releases -->
+    <section class="mb-12">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="font-serif text-2xl font-bold text-idu-blue">Latest Press Releases</h2>
+        <a href="news.html" class="text-idu-mid text-sm font-semibold hover:text-idu-bright">View All →</a>
+      </div>
+      <div class="space-y-3">
+
+        <div class="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition flex gap-5">
+          <div class="w-20 text-center shrink-0">
+            <div class="text-idu-blue font-bold leading-none">04</div>
+            <div class="text-gray-400 text-xs uppercase">Dec 2025</div>
+          </div>
+          <div>
+            <span class="text-xs bg-idu-gold/20 text-idu-gold font-bold px-2 py-0.5 rounded-full uppercase mr-2">Award</span>
+            <h3 class="font-semibold text-idu-text inline hover:text-idu-mid cursor-pointer">IDU Presents Bush-Thatcher Award for Freedom to Tidjane Thiam</h3>
+            <div class="mt-2 flex gap-3">
+              <a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">Read Release →</a>
+              <a href="#" class="text-xs text-gray-400 hover:text-idu-mid">📄 PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition flex gap-5">
+          <div class="w-20 text-center shrink-0">
+            <div class="text-idu-blue font-bold leading-none">Feb</div>
+            <div class="text-gray-400 text-xs uppercase">2026</div>
+          </div>
+          <div>
+            <span class="text-xs bg-blue-100 text-idu-mid font-bold px-2 py-0.5 rounded-full uppercase mr-2">Statement</span>
+            <h3 class="font-semibold text-idu-text inline hover:text-idu-mid cursor-pointer">IDU Statement on the Situation in Ukraine</h3>
+            <div class="mt-2 flex gap-3">
+              <a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">Read Release →</a>
+              <a href="#" class="text-xs text-gray-400 hover:text-idu-mid">📄 PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition flex gap-5">
+          <div class="w-20 text-center shrink-0">
+            <div class="text-idu-blue font-bold leading-none">Nov</div>
+            <div class="text-gray-400 text-xs uppercase">2025</div>
+          </div>
+          <div>
+            <span class="text-xs bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full uppercase mr-2">Event Report</span>
+            <h3 class="font-semibold text-idu-text inline hover:text-idu-mid cursor-pointer">IDU Forum 2025 Concludes in Washington D.C.</h3>
+            <div class="mt-2 flex gap-3">
+              <a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">Read Release →</a>
+              <a href="#" class="text-xs text-gray-400 hover:text-idu-mid">📄 PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition flex gap-5">
+          <div class="w-20 text-center shrink-0">
+            <div class="text-idu-blue font-bold leading-none">2025</div>
+            <div class="text-gray-400 text-xs uppercase">News</div>
+          </div>
+          <div>
+            <span class="text-xs bg-orange-100 text-orange-700 font-bold px-2 py-0.5 rounded-full uppercase mr-2">Resolution</span>
+            <h3 class="font-semibold text-idu-text inline hover:text-idu-mid cursor-pointer">Resolution on the Protection of Democracy in Venezuela</h3>
+            <div class="mt-2 flex gap-3">
+              <a href="#" class="text-xs text-idu-mid font-semibold hover:text-idu-bright">Read Release →</a>
+              <a href="#" class="text-xs text-gray-400 hover:text-idu-mid">📄 PDF</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Photo Library -->
+    <section class="mb-12">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="font-serif text-2xl font-bold text-idu-blue">Photo Library</h2>
+        <a href="#" class="text-idu-mid text-sm font-semibold hover:text-idu-bright">Browse All →</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group">
+          <div class="h-44 bg-idu-blue/20 flex items-center justify-center relative">
+            <span class="text-4xl">🏛️</span>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-center justify-center opacity-0 group-hover:opacity-100">
+              <span class="text-white text-sm font-semibold bg-black/50 px-3 py-1 rounded">Download</span>
+            </div>
+          </div>
+          <div class="bg-white p-3 text-xs text-gray-500">IDU Forum 2025 — Washington D.C.</div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group">
+          <div class="h-44 bg-idu-mid/20 flex items-center justify-center relative">
+            <span class="text-4xl">🏆</span>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-center justify-center opacity-0 group-hover:opacity-100">
+              <span class="text-white text-sm font-semibold bg-black/50 px-3 py-1 rounded">Download</span>
+            </div>
+          </div>
+          <div class="bg-white p-3 text-xs text-gray-500">Bush-Thatcher Award Ceremony 2025</div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group">
+          <div class="h-44 bg-idu-gold/20 flex items-center justify-center relative">
+            <span class="text-4xl">🌍</span>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-center justify-center opacity-0 group-hover:opacity-100">
+              <span class="text-white text-sm font-semibold bg-black/50 px-3 py-1 rounded">Download</span>
+            </div>
+          </div>
+          <div class="bg-white p-3 text-xs text-gray-500">IDU Congress 2024 — Prague</div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group">
+          <div class="h-44 bg-idu-blue/10 flex items-center justify-center relative">
+            <span class="text-4xl">📜</span>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-center justify-center opacity-0 group-hover:opacity-100">
+              <span class="text-white text-sm font-semibold bg-black/50 px-3 py-1 rounded">Download</span>
+            </div>
+          </div>
+          <div class="bg-white p-3 text-xs text-gray-500">IDU Founding Documents — London 1983</div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group">
+          <div class="h-44 bg-idu-mid/10 flex items-center justify-center relative">
+            <span class="text-4xl">🤝</span>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-center justify-center opacity-0 group-hover:opacity-100">
+              <span class="text-white text-sm font-semibold bg-black/50 px-3 py-1 rounded">Download</span>
+            </div>
+          </div>
+          <div class="bg-white p-3 text-xs text-gray-500">IDU Executive Committee Meeting — Geneva</div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group">
+          <div class="h-44 bg-idu-gold/10 flex items-center justify-center relative">
+            <span class="text-4xl">🗳️</span>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-center justify-center opacity-0 group-hover:opacity-100">
+              <span class="text-white text-sm font-semibold bg-black/50 px-3 py-1 rounded">Download</span>
+            </div>
+          </div>
+          <div class="bg-white p-3 text-xs text-gray-500">IDU Asia-Pacific Forum — Singapore 2024</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press Contact Card -->
+    <section id="contact">
+      <h2 class="font-serif text-2xl font-bold text-idu-blue mb-6">Press Contact</h2>
+      <div class="bg-white rounded-xl shadow-sm p-6 flex flex-col md:flex-row gap-6 items-start">
+        <div class="w-20 h-20 bg-idu-blue/10 rounded-full flex items-center justify-center text-3xl shrink-0">👤</div>
+        <div class="flex-1">
+          <h3 class="font-bold text-idu-text text-lg mb-0.5">Press Office</h3>
+          <p class="text-idu-mid text-sm font-semibold mb-3">International Democracy Union Secretariat</p>
+          <div class="space-y-2 text-sm text-gray-600">
+            <div>✉️ <a href="mailto:press@idu.org" class="text-idu-mid hover:text-idu-bright">press@idu.org</a></div>
+            <div>📞 +41 22 XXX XXXX (Geneva Secretariat)</div>
+            <div>🌐 Available Monday – Friday, 09:00–17:00 CET</div>
+          </div>
+        </div>
+        <div class="shrink-0">
+          <a href="mailto:press@idu.org" class="bg-idu-blue text-white px-5 py-2.5 rounded text-sm font-semibold hover:bg-idu-mid transition block text-center">Contact Press Office</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-idu-blue text-white pt-10 pb-6 px-6 mt-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm text-blue-200">
+      <span>© 2026 International Democracy Union</span>
+      <div class="flex gap-6">
+        <a href="homepage.html" class="hover:text-white">Home</a>
+        <a href="news.html" class="hover:text-white">News</a>
+        <a href="members.html" class="hover:text-white">Members</a>
+        <a href="#" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDU — International Democracy Union</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'idu-blue': '#003087',
+            'idu-mid': '#0057B7',
+            'idu-bright': '#0071CE',
+            'idu-gold': '#C9A84C',
+            'idu-grey': '#F4F6F8',
+            'idu-text': '#1A1A2E',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .marquee { animation: marquee 30s linear infinite; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  </style>
+</head>
+<body class="bg-white text-idu-text font-sans">
+
+  <!-- Utility Bar -->
+  <div class="bg-idu-text text-white text-xs py-2 px-6 flex justify-end gap-6">
+    <a href="#" class="hover:text-idu-gold transition">Member Login</a>
+    <a href="#" class="hover:text-idu-gold transition">Press Kit</a>
+    <a href="#" class="hover:text-idu-gold transition">Contact</a>
+  </div>
+
+  <!-- Primary Nav -->
+  <nav class="bg-idu-blue text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 flex items-center h-16 gap-8">
+      <div class="flex items-center gap-3 mr-4">
+        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+          <span class="text-idu-blue font-bold text-sm">IDU</span>
+        </div>
+        <span class="font-serif font-bold text-lg tracking-wide hidden md:block">International Democracy Union</span>
+      </div>
+      <div class="flex gap-6 text-sm font-medium ml-auto">
+        <a href="about.html" class="hover:text-idu-gold transition">About</a>
+        <a href="members.html" class="hover:text-idu-gold transition">Members</a>
+        <a href="news.html" class="hover:text-idu-gold transition">News</a>
+        <a href="events.html" class="hover:text-idu-gold transition">Events</a>
+        <a href="leadership.html" class="hover:text-idu-gold transition">Leadership</a>
+        <a href="media-centre.html" class="hover:text-idu-gold transition">Media Centre</a>
+      </div>
+      <a href="#" class="ml-4 bg-idu-gold text-idu-text px-4 py-2 rounded text-sm font-semibold hover:bg-yellow-400 transition">Member Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative h-[600px] overflow-hidden">
+    <img src="hero-homepage.png" alt="IDU Summit" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-idu-blue/70"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+      <p class="text-idu-gold uppercase tracking-[0.3em] text-sm font-semibold mb-4">Est. 1983</p>
+      <h1 class="font-serif text-4xl md:text-6xl font-bold max-w-4xl leading-tight mb-4">The Global Alliance of Centre-Right Democratic Parties</h1>
+      <p class="text-lg text-blue-100 mb-8 max-w-2xl">Founded in 1983 by Margaret Thatcher, Ronald Reagan, and Helmut Kohl to unite centre-right democratic parties across the world.</p>
+      <div class="flex gap-4 flex-wrap justify-center">
+        <a href="members.html" class="bg-white text-idu-blue px-6 py-3 rounded font-semibold hover:bg-idu-grey transition">Meet Our Members</a>
+        <a href="news.html" class="border border-white text-white px-6 py-3 rounded font-semibold hover:bg-white/10 transition">Latest News</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="bg-idu-mid text-white py-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center px-6">
+      <div>
+        <div class="text-3xl font-bold font-serif">80+</div>
+        <div class="text-sm text-blue-100 mt-1 uppercase tracking-wider">Member Parties</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold font-serif">6</div>
+        <div class="text-sm text-blue-100 mt-1 uppercase tracking-wider">Continents</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold font-serif">1983</div>
+        <div class="text-sm text-blue-100 mt-1 uppercase tracking-wider">Founded</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold font-serif">40+</div>
+        <div class="text-sm text-blue-100 mt-1 uppercase tracking-wider">Years Active</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Latest News -->
+  <section class="bg-idu-grey py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="font-serif text-3xl font-bold text-idu-blue">Latest News</h2>
+        <a href="news.html" class="text-idu-mid font-semibold text-sm hover:text-idu-bright">View All News →</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="h-44 bg-idu-blue/10 flex items-center justify-center">
+            <span class="text-idu-blue/30 text-5xl">📰</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="bg-idu-gold/20 text-idu-gold text-xs font-bold px-2 py-1 rounded uppercase">Award</span>
+              <span class="text-gray-400 text-xs">December 4, 2025</span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-idu-text mb-2 leading-snug">IDU Presents Bush-Thatcher Award for Freedom to Tidjane Thiam</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-3">The International Democracy Union has awarded its prestigious Bush-Thatcher Award for Freedom to Tidjane Thiam, recognising his outstanding commitment to democratic values.</p>
+            <a href="#" class="text-idu-mid text-sm font-semibold hover:text-idu-bright">Read More →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="h-44 bg-idu-blue/10 flex items-center justify-center">
+            <span class="text-idu-blue/30 text-5xl">📋</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="bg-blue-100 text-idu-mid text-xs font-bold px-2 py-1 rounded uppercase">Statement</span>
+              <span class="text-gray-400 text-xs">February 2026</span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-idu-text mb-2 leading-snug">IDU Statement on the Situation in Ukraine</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-3">The IDU reaffirms its unwavering support for Ukraine's sovereignty and territorial integrity in the face of ongoing Russian aggression.</p>
+            <a href="#" class="text-idu-mid text-sm font-semibold hover:text-idu-bright">Read More →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="h-44 bg-idu-blue/10 flex items-center justify-center">
+            <span class="text-idu-blue/30 text-5xl">🏛️</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded uppercase">Event Report</span>
+              <span class="text-gray-400 text-xs">November 2025</span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-idu-text mb-2 leading-snug">IDU Forum 2025 Concludes in Washington D.C.</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-3">Leaders from over 40 centre-right parties gathered in Washington for the IDU Forum 2025, discussing democratic resilience and global challenges.</p>
+            <a href="#" class="text-idu-mid text-sm font-semibold hover:text-idu-bright">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="font-serif text-3xl font-bold text-idu-blue">Upcoming Events</h2>
+        <a href="events.html" class="text-idu-mid font-semibold text-sm hover:text-idu-bright">View All Events →</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="border-l-4 border-idu-gold pl-5 py-2">
+          <div class="text-idu-gold font-bold text-sm mb-1">APRIL 2026</div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1">IDU Executive Committee Meeting</h3>
+          <p class="text-gray-500 text-sm">Brussels, Belgium</p>
+        </div>
+        <div class="border-l-4 border-idu-mid pl-5 py-2">
+          <div class="text-idu-mid font-bold text-sm mb-1">JUNE 2026</div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1">IDU Democracy Forum — Europe</h3>
+          <p class="text-gray-500 text-sm">Warsaw, Poland</p>
+        </div>
+        <div class="border-l-4 border-idu-mid pl-5 py-2">
+          <div class="text-idu-mid font-bold text-sm mb-1">OCTOBER 2026</div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1">IDU Annual Congress 2026</h3>
+          <p class="text-gray-500 text-sm">Location TBA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Member Parties Marquee -->
+  <section class="bg-idu-grey py-16 px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="font-serif text-3xl font-bold text-idu-blue text-center mb-4">Member Parties</h2>
+      <p class="text-center text-gray-500 mb-10">A global network of 80+ centre-right democratic parties across 6 continents</p>
+      <!-- Marquee -->
+      <div class="overflow-hidden mb-10">
+        <div class="flex gap-8 whitespace-nowrap marquee">
+          <span class="text-sm text-gray-600 font-medium">🇺🇸 Republican Party</span>
+          <span class="text-sm text-gray-600 font-medium">🇬🇧 Conservative Party</span>
+          <span class="text-sm text-gray-600 font-medium">🇩🇪 CDU</span>
+          <span class="text-sm text-gray-600 font-medium">🇦🇺 Liberal Party of Australia</span>
+          <span class="text-sm text-gray-600 font-medium">🇨🇦 Conservative Party of Canada</span>
+          <span class="text-sm text-gray-600 font-medium">🇬🇷 New Democracy</span>
+          <span class="text-sm text-gray-600 font-medium">🇪🇸 People's Party</span>
+          <span class="text-sm text-gray-600 font-medium">🇮🇹 Fratelli d'Italia</span>
+          <span class="text-sm text-gray-600 font-medium">🇧🇬 GERB</span>
+          <span class="text-sm text-gray-600 font-medium">🇭🇷 Croatian Democratic Union</span>
+          <span class="text-sm text-gray-600 font-medium">🇮🇸 Independence Party</span>
+          <span class="text-sm text-gray-600 font-medium">🇸🇪 Moderate Party</span>
+          <span class="text-sm text-gray-600 font-medium">🇳🇿 National Party</span>
+          <span class="text-sm text-gray-600 font-medium">🇮🇱 Likud</span>
+          <span class="text-sm text-gray-600 font-medium">🇧🇪 N-VA</span>
+          <!-- repeat -->
+          <span class="text-sm text-gray-600 font-medium">🇺🇸 Republican Party</span>
+          <span class="text-sm text-gray-600 font-medium">🇬🇧 Conservative Party</span>
+          <span class="text-sm text-gray-600 font-medium">🇩🇪 CDU</span>
+          <span class="text-sm text-gray-600 font-medium">🇦🇺 Liberal Party of Australia</span>
+          <span class="text-sm text-gray-600 font-medium">🇨🇦 Conservative Party of Canada</span>
+          <span class="text-sm text-gray-600 font-medium">🇬🇷 New Democracy</span>
+          <span class="text-sm text-gray-600 font-medium">🇪🇸 People's Party</span>
+          <span class="text-sm text-gray-600 font-medium">🇮🇹 Fratelli d'Italia</span>
+        </div>
+      </div>
+      <!-- World Map placeholder -->
+      <div class="bg-idu-blue/5 border-2 border-dashed border-idu-blue/20 rounded-xl h-64 flex items-center justify-center mb-6">
+        <div class="text-center text-idu-blue/40">
+          <div class="text-5xl mb-2">🗺️</div>
+          <div class="font-semibold">Interactive World Map</div>
+          <div class="text-sm">Member parties highlighted by region</div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="members.html" class="bg-idu-blue text-white px-8 py-3 rounded font-semibold hover:bg-idu-mid transition">View All Members</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About IDU -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="bg-idu-grey rounded-xl h-72 flex items-center justify-center">
+        <span class="text-6xl">🏛️</span>
+      </div>
+      <div>
+        <p class="text-idu-gold uppercase tracking-widest text-sm font-semibold mb-3">About the IDU</p>
+        <h2 class="font-serif text-3xl font-bold text-idu-blue mb-4">Defending Democracy Since 1983</h2>
+        <p class="text-gray-600 mb-4">The International Democracy Union (IDU) is a working group of centre-right political parties, which enables them to establish contacts and to co-operate on matters of policy and organisation.</p>
+        <p class="text-gray-600 mb-6">Founded in London in 1983, the IDU now brings together over 80 member parties from across the globe, united by a commitment to freedom, democracy, the rule of law, and individual human rights.</p>
+        <a href="about.html" class="inline-block bg-idu-blue text-white px-6 py-3 rounded font-semibold hover:bg-idu-mid transition">About the IDU →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bush-Thatcher Award -->
+  <section class="bg-idu-blue py-16 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="text-idu-gold text-sm uppercase tracking-widest font-semibold mb-3">★ Prestigious Recognition ★</div>
+      <h2 class="font-serif text-3xl font-bold text-white mb-4">Bush-Thatcher Award for Freedom</h2>
+      <p class="text-blue-100 text-lg max-w-2xl mx-auto mb-8">Awarded annually to an individual who has made an outstanding contribution to the cause of freedom, democracy, and human rights around the world.</p>
+      <div class="bg-white/10 border border-idu-gold/40 rounded-xl p-6 mb-8 max-w-lg mx-auto">
+        <div class="text-idu-gold font-bold text-sm mb-1 uppercase">2025 Laureate</div>
+        <div class="text-white font-serif text-2xl font-bold">Tidjane Thiam</div>
+        <div class="text-blue-200 text-sm mt-1">Awarded December 4, 2025</div>
+      </div>
+      <a href="bush-thatcher-award.html" class="inline-block border border-idu-gold text-idu-gold px-6 py-3 rounded font-semibold hover:bg-idu-gold hover:text-idu-text transition">Learn More →</a>
+    </div>
+  </section>
+
+  <!-- Sub-Organisations -->
+  <section class="bg-idu-grey py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="font-serif text-3xl font-bold text-idu-blue text-center mb-4">Our Sub-Organisations</h2>
+      <p class="text-center text-gray-500 mb-10">Specialised organisations operating under the IDU umbrella</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-idu-blue rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">IYDU</div>
+          <div class="font-semibold text-idu-text mb-1">International Young Democrat Union</div>
+          <div class="text-sm text-gray-400">Youth wing of the IDU</div>
+        </div>
+        <div class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-idu-mid rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">IWDU</div>
+          <div class="font-semibold text-idu-text mb-1">International Women's Democrat Union</div>
+          <div class="text-sm text-gray-400">Women's leadership network</div>
+        </div>
+        <div class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-idu-blue rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">CDU</div>
+          <div class="font-semibold text-idu-text mb-1">Christian Democrat Union</div>
+          <div class="text-sm text-gray-400">Christian democratic parties</div>
+        </div>
+        <div class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-idu-mid rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">DUA</div>
+          <div class="font-semibold text-idu-text mb-1">Democrat Union of Africa</div>
+          <div class="text-sm text-gray-400">African democratic parties</div>
+        </div>
+        <div class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-idu-blue rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">UPLA</div>
+          <div class="font-semibold text-idu-text mb-1">Unión de Partidos Latinoamericanos</div>
+          <div class="text-sm text-gray-400">Latin American centre-right parties</div>
+        </div>
+        <div class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-idu-mid rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">APDU</div>
+          <div class="font-semibold text-idu-text mb-1">Asia Pacific Democrat Union</div>
+          <div class="text-sm text-gray-400">Asia-Pacific member parties</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Quick Access -->
+  <div class="bg-idu-text text-white py-6 px-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-8 text-sm">
+      <a href="media-centre.html" class="flex items-center gap-2 hover:text-idu-gold transition">
+        <span>📁</span> Download Press Kit
+      </a>
+      <span class="text-white/20 hidden md:block">|</span>
+      <a href="news.html" class="flex items-center gap-2 hover:text-idu-gold transition">
+        <span>📄</span> Latest Press Release
+      </a>
+      <span class="text-white/20 hidden md:block">|</span>
+      <a href="media-centre.html#contact" class="flex items-center gap-2 hover:text-idu-gold transition">
+        <span>✉️</span> Press Contact
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-idu-blue text-white pt-12 pb-6 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+            <span class="text-idu-blue font-bold text-xs">IDU</span>
+          </div>
+          <span class="font-serif font-bold">IDU</span>
+        </div>
+        <p class="text-blue-200 text-sm">The International Democracy Union — the global alliance of centre-right democratic parties.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-idu-gold uppercase text-xs tracking-wider">Organisation</h4>
+        <ul class="space-y-2 text-sm text-blue-200">
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="leadership.html" class="hover:text-white">Leadership</a></li>
+          <li><a href="members.html" class="hover:text-white">Members</a></li>
+          <li><a href="#" class="hover:text-white">Sub-Organisations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-idu-gold uppercase text-xs tracking-wider">Resources</h4>
+        <ul class="space-y-2 text-sm text-blue-200">
+          <li><a href="news.html" class="hover:text-white">News</a></li>
+          <li><a href="events.html" class="hover:text-white">Events</a></li>
+          <li><a href="media-centre.html" class="hover:text-white">Media Centre</a></li>
+          <li><a href="bush-thatcher-award.html" class="hover:text-white">Bush-Thatcher Award</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-idu-gold uppercase text-xs tracking-wider">Connect</h4>
+        <ul class="space-y-2 text-sm text-blue-200">
+          <li><a href="#" class="hover:text-white">Twitter / X</a></li>
+          <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+          <li><a href="#" class="hover:text-white">Facebook</a></li>
+          <li><a href="#" class="hover:text-white">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-wrap justify-between items-center text-xs text-blue-300">
+      <span>© 2026 International Democracy Union. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Use</span>
+    </div>
+  </footer>
+
+</body>
+</html>

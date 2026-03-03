@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News — International Democracy Union</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'idu-blue': '#003087', 'idu-mid': '#0057B7', 'idu-bright': '#0071CE',
+            'idu-gold': '#C9A84C', 'idu-grey': '#F4F6F8', 'idu-text': '#1A1A2E',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-idu-grey text-idu-text font-sans">
+
+  <!-- Utility Bar -->
+  <div class="bg-idu-text text-white text-xs py-2 px-6 flex justify-end gap-6">
+    <a href="#" class="hover:text-idu-gold">Member Login</a>
+    <a href="#" class="hover:text-idu-gold">Press Kit</a>
+    <a href="#" class="hover:text-idu-gold">Contact</a>
+  </div>
+
+  <!-- Nav -->
+  <nav class="bg-idu-blue text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 flex items-center h-16 gap-8">
+      <a href="homepage.html" class="flex items-center gap-3 mr-4">
+        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+          <span class="text-idu-blue font-bold text-sm">IDU</span>
+        </div>
+        <span class="font-serif font-bold text-lg tracking-wide hidden md:block">International Democracy Union</span>
+      </a>
+      <div class="flex gap-6 text-sm font-medium ml-auto">
+        <a href="about.html" class="hover:text-idu-gold">About</a>
+        <a href="members.html" class="hover:text-idu-gold">Members</a>
+        <a href="news.html" class="text-idu-gold border-b-2 border-idu-gold pb-1">News</a>
+        <a href="events.html" class="hover:text-idu-gold">Events</a>
+        <a href="leadership.html" class="hover:text-idu-gold">Leadership</a>
+        <a href="media-centre.html" class="hover:text-idu-gold">Media Centre</a>
+      </div>
+      <a href="#" class="ml-4 bg-idu-gold text-idu-text px-4 py-2 rounded text-sm font-semibold">Member Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative h-64 overflow-hidden">
+    <img src="hero-news.png" alt="News" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-idu-blue/65"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+      <p class="text-idu-gold uppercase tracking-widest text-sm mb-2">Statements & Releases</p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold">News</h1>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="bg-white border-b border-gray-200 px-6 py-4 sticky top-16 z-40">
+    <div class="max-w-5xl mx-auto flex flex-wrap gap-2 items-center">
+      <button class="bg-idu-blue text-white text-sm px-4 py-1.5 rounded-full font-medium">All</button>
+      <button class="bg-idu-grey text-idu-text text-sm px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Statement</button>
+      <button class="bg-idu-grey text-idu-text text-sm px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Resolution</button>
+      <button class="bg-idu-grey text-idu-text text-sm px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Event Report</button>
+      <button class="bg-idu-grey text-idu-text text-sm px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Award</button>
+      <button class="bg-idu-grey text-idu-text text-sm px-4 py-1.5 rounded-full font-medium hover:bg-idu-blue hover:text-white transition">Press Release</button>
+      <input type="text" placeholder="Search news..." class="ml-auto text-sm border border-gray-200 rounded px-3 py-1.5 w-52">
+    </div>
+  </div>
+
+  <!-- News List -->
+  <section class="py-10 px-6">
+    <div class="max-w-5xl mx-auto space-y-4">
+
+      <!-- Item -->
+      <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex gap-6 p-5">
+        <div class="w-20 text-center shrink-0">
+          <div class="text-idu-blue font-bold text-lg leading-none">04</div>
+          <div class="text-gray-400 text-xs uppercase">Dec 2025</div>
+        </div>
+        <div class="flex-1">
+          <div class="flex gap-3 mb-2">
+            <span class="text-xs bg-idu-gold/20 text-idu-gold font-bold px-2 py-0.5 rounded-full uppercase">Award</span>
+          </div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1 hover:text-idu-mid cursor-pointer">IDU Presents Bush-Thatcher Award for Freedom to Tidjane Thiam</h3>
+          <p class="text-gray-500 text-sm line-clamp-2">The International Democracy Union has awarded its prestigious Bush-Thatcher Award for Freedom to Tidjane Thiam, recognising his exceptional commitment to democratic values and personal bravery in the face of political adversity.</p>
+          <a href="#" class="text-idu-mid text-sm font-semibold mt-2 inline-block hover:text-idu-bright">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex gap-6 p-5">
+        <div class="w-20 text-center shrink-0">
+          <div class="text-idu-blue font-bold text-lg leading-none">Feb</div>
+          <div class="text-gray-400 text-xs uppercase">2026</div>
+        </div>
+        <div class="flex-1">
+          <div class="flex gap-3 mb-2">
+            <span class="text-xs bg-blue-100 text-idu-mid font-bold px-2 py-0.5 rounded-full uppercase">Statement</span>
+          </div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1 hover:text-idu-mid cursor-pointer">IDU Statement on the Situation in Ukraine</h3>
+          <p class="text-gray-500 text-sm line-clamp-2">The IDU reaffirms its unwavering support for Ukraine's sovereignty, territorial integrity, and the Ukrainian people's right to self-determination. The IDU calls on all democratic nations to maintain pressure on Russia.</p>
+          <a href="#" class="text-idu-mid text-sm font-semibold mt-2 inline-block hover:text-idu-bright">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex gap-6 p-5">
+        <div class="w-20 text-center shrink-0">
+          <div class="text-idu-blue font-bold text-lg leading-none">Nov</div>
+          <div class="text-gray-400 text-xs uppercase">2025</div>
+        </div>
+        <div class="flex-1">
+          <div class="flex gap-3 mb-2">
+            <span class="text-xs bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full uppercase">Event Report</span>
+          </div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1 hover:text-idu-mid cursor-pointer">IDU Forum 2025 Concludes in Washington D.C.</h3>
+          <p class="text-gray-500 text-sm line-clamp-2">The IDU Forum 2025 brought together centre-right leaders from over 40 countries in Washington D.C. to discuss democratic resilience, economic freedom, and the shared challenges facing open societies.</p>
+          <a href="#" class="text-idu-mid text-sm font-semibold mt-2 inline-block hover:text-idu-bright">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex gap-6 p-5">
+        <div class="w-20 text-center shrink-0">
+          <div class="text-idu-blue font-bold text-lg leading-none">2025</div>
+          <div class="text-gray-400 text-xs uppercase">News</div>
+        </div>
+        <div class="flex-1">
+          <div class="flex gap-3 mb-2">
+            <span class="text-xs bg-purple-100 text-purple-700 font-bold px-2 py-0.5 rounded-full uppercase">Press Release</span>
+          </div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1 hover:text-idu-mid cursor-pointer">IDU Welcomes New Member Party from Nepal</h3>
+          <p class="text-gray-500 text-sm line-clamp-2">The IDU welcomes a new full member party from Nepal, expanding the organisation's reach in South Asia and reinforcing its commitment to democratic values across the Asia-Pacific region.</p>
+          <a href="#" class="text-idu-mid text-sm font-semibold mt-2 inline-block hover:text-idu-bright">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex gap-6 p-5">
+        <div class="w-20 text-center shrink-0">
+          <div class="text-idu-blue font-bold text-lg leading-none">2025</div>
+          <div class="text-gray-400 text-xs uppercase">Resolution</div>
+        </div>
+        <div class="flex-1">
+          <div class="flex gap-3 mb-2">
+            <span class="text-xs bg-orange-100 text-orange-700 font-bold px-2 py-0.5 rounded-full uppercase">Resolution</span>
+          </div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1 hover:text-idu-mid cursor-pointer">Resolution on the Protection of Democracy in Venezuela</h3>
+          <p class="text-gray-500 text-sm line-clamp-2">The IDU adopts a resolution condemning the ongoing suppression of democratic rights in Venezuela and calling for the release of all political prisoners and the restoration of free and fair elections.</p>
+          <a href="#" class="text-idu-mid text-sm font-semibold mt-2 inline-block hover:text-idu-bright">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex gap-6 p-5">
+        <div class="w-20 text-center shrink-0">
+          <div class="text-idu-blue font-bold text-lg leading-none">Oct</div>
+          <div class="text-gray-400 text-xs uppercase">2025</div>
+        </div>
+        <div class="flex-1">
+          <div class="flex gap-3 mb-2">
+            <span class="text-xs bg-blue-100 text-idu-mid font-bold px-2 py-0.5 rounded-full uppercase">Statement</span>
+          </div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1 hover:text-idu-mid cursor-pointer">IDU Statement on the Importance of Free and Fair Elections</h3>
+          <p class="text-gray-500 text-sm line-clamp-2">The IDU reaffirms the centrality of free and fair elections to democratic governance and calls on all member parties to uphold electoral integrity in their respective nations.</p>
+          <a href="#" class="text-idu-mid text-sm font-semibold mt-2 inline-block hover:text-idu-bright">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex gap-6 p-5">
+        <div class="w-20 text-center shrink-0">
+          <div class="text-idu-blue font-bold text-lg leading-none">Sep</div>
+          <div class="text-gray-400 text-xs uppercase">2025</div>
+        </div>
+        <div class="flex-1">
+          <div class="flex gap-3 mb-2">
+            <span class="text-xs bg-orange-100 text-orange-700 font-bold px-2 py-0.5 rounded-full uppercase">Resolution</span>
+          </div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1 hover:text-idu-mid cursor-pointer">IDU Resolution Supporting Taiwan's Democratic Governance</h3>
+          <p class="text-gray-500 text-sm line-clamp-2">The IDU expresses strong solidarity with the people of Taiwan and their democratically elected government, condemning any threats to the island's democratic institutions and way of life.</p>
+          <a href="#" class="text-idu-mid text-sm font-semibold mt-2 inline-block hover:text-idu-bright">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex gap-6 p-5">
+        <div class="w-20 text-center shrink-0">
+          <div class="text-idu-blue font-bold text-lg leading-none">Jul</div>
+          <div class="text-gray-400 text-xs uppercase">2025</div>
+        </div>
+        <div class="flex-1">
+          <div class="flex gap-3 mb-2">
+            <span class="text-xs bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full uppercase">Event Report</span>
+          </div>
+          <h3 class="font-serif font-bold text-idu-text text-lg mb-1 hover:text-idu-mid cursor-pointer">IYDU World Congress Held in Vilnius, Lithuania</h3>
+          <p class="text-gray-500 text-sm line-clamp-2">The International Young Democrat Union held its World Congress in Vilnius, gathering over 500 young democratic leaders from 60 countries to discuss the future of freedom.</p>
+          <a href="#" class="text-idu-mid text-sm font-semibold mt-2 inline-block hover:text-idu-bright">Read More →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center mt-10 gap-2">
+      <button class="w-9 h-9 rounded bg-idu-blue text-white text-sm font-semibold">1</button>
+      <button class="w-9 h-9 rounded bg-white border border-gray-200 text-sm text-idu-text hover:border-idu-mid">2</button>
+      <button class="w-9 h-9 rounded bg-white border border-gray-200 text-sm text-idu-text hover:border-idu-mid">3</button>
+      <button class="w-9 h-9 rounded bg-white border border-gray-200 text-sm text-idu-text hover:border-idu-mid">4</button>
+      <button class="w-9 h-9 rounded bg-white border border-gray-200 text-sm text-idu-text hover:border-idu-mid">→</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-idu-blue text-white pt-10 pb-6 px-6 mt-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm text-blue-200">
+      <span>© 2026 International Democracy Union</span>
+      <div class="flex gap-6">
+        <a href="homepage.html" class="hover:text-white">Home</a>
+        <a href="members.html" class="hover:text-white">Members</a>
+        <a href="media-centre.html" class="hover:text-white">Media</a>
+        <a href="#" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
